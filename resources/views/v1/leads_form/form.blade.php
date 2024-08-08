@@ -47,7 +47,7 @@
 
                             <div class="form-button" class="text text-center">
                                 <button id="submit" type="submit" class="ibtn ibtn-full">ارسال</button>
-                                <a href="{{ route('web.home') }}" class="text text-center">الرجوع للصفحة الرئيسية</a>
+                                {{-- <a href="{{ route('web.home') }}" class="text text-center">الرجوع للصفحة الرئيسية</a> --}}
                             </div>
                         </form>
                     </div>

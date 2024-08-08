@@ -6,7 +6,7 @@
             <div class="inner-container clearfix">
                 <!-- Top Left -->
                 <div class="top-left clearfix">
-                    <div class="text"><span>Temps de travail:</span> Du lundi au vendredi de 9h à 17h</div>
+                    <div class="text"><span>Temps de travail:</span> Du lundi au vendredi de 9h30min à 20h</div>
                 </div>
 
                 <!-- Top Right -->
@@ -19,8 +19,8 @@
                         <li><a href="https://www.linkedin.com/" class="fa fa-linkedin"></a></li>
                         <li><a href="https://youtube.com/" class="fa fa-youtube-play"></a></li>
                     </ul>
-                    <div class="text">Appelez pour une consultation gratuite: <a
-                            href="tel:++212663520502">+212 663-520502</a></div>
+                    {{-- <div class="text">Appelez pour une consultation gratuite: <a
+                            href="tel:++212663520502">+212 663-520502</a></div> --}}
                 </div>
 
             </div>
@@ -33,8 +33,10 @@
 
             <!-- Logo Box -->
             <div class="pull-left logo-box">
-                <div class="logo"><a href="{{ route('web.home') }}"><img src="/web/images/CoachBen.png" alt=""
-                            title=""></a></div>
+                <div class="logo"><a href="{{ route('web.home') }}">
+                        <img src="/web/images/CoachBen.png" alt="" title="">
+                        {{-- Mohamed BenMoussa --}}
+                    </a></div>
             </div>
 
             <!-- Nav Outer -->
@@ -60,7 +62,7 @@
                                 <a href="{{ route('web.home') }}">Accueil</a>
                             </li>
                             <li class="">
-                                <a href="{{ route('lead_form') }}">Appointment</a>
+                                <a href="{{ route('lead_form') }}">Rendez-vous</a>
                             </li>
                             <li class="">
                                 <a href="{{ route('web.coaching.types') }}">Types de coaching</a>

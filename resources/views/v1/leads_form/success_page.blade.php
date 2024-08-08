@@ -62,7 +62,7 @@
         </p>
         <p>نتطلع إلى خدمتك قريبًا.</p>
         <p>مع تحياتنا،<br>[Mr Mohamed BenMoussa]</p>
-        <a href="{{ route('web.home') }}" class="button mt-5">العودة إلى الصفحة الرئيسية</a>
+        {{-- <a href="{{ route('web.home') }}" class="button mt-5">العودة إلى الصفحة الرئيسية</a> --}}
 
     </div>
 </body>
