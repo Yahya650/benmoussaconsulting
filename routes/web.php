@@ -1,9 +1,12 @@
 <?php
 
-use App\Http\Controllers\v1\dashboard\admin\home\HomeController;
-use App\Http\Controllers\v1\dashboard\auth\AuthController;
-use App\Http\Controllers\v1\web\HomeController as WebHomeController;
+use App\Mail\NewLeadNotifMail;
+use Illuminate\Support\Facades\Mail;
+// use App\Http\Controllers\v1\dashboard\auth\AuthController;
+// use App\Http\Controllers\v1\dashboard\admin\home\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\v1\leads_form\ClientsController;
+use App\Http\Controllers\v1\web\HomeController as WebHomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,8 +19,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-
 Route::namespace('web')->name('web.')->group(function () {
     Route::get('/', [WebHomeController::class, 'index'])->name('home');
     Route::get('/contact', [WebHomeController::class, 'contact'])->name('contact');
@@ -25,14 +26,19 @@ Route::namespace('web')->name('web.')->group(function () {
 });
 
 
+Route::view('/test', 'v1.mails.new_lead');
 
-Route::prefix('auth')->group(function () {
-    Route::get('/signin',[AuthController::class,'getLogin'])->name('auth.signin');
-    Route::post('signin', [AuthController::class, 'postSignin'])->name('auth.signin.post');
-});
+Route::get('/take-appointment', [ClientsController::class, 'getLeadForm'])->name('lead_form');
+Route::post('/post-appointment', [ClientsController::class, 'postLeadForm'])->name('leads.store');
+Route::get('/confirmation-message', [ClientsController::class, 'showConfirmation'])->name('confirmation.message');
 
-Route::middleware(['auth'])->group(function () {
-    Route::prefix('admin')->name('admin.')->group(function () {
-        Route::get('/',[HomeController::class,'index'])->name('home');
-    });
-});
+// Route::prefix('auth')->group(function () {
+//     Route::get('/signin', [AuthController::class, 'getLogin'])->name('auth.signin');
+//     Route::post('signin', [AuthController::class, 'postSignin'])->name('auth.signin.post');
+// });
+
+// Route::middleware(['auth'])->group(function () {
+//     Route::prefix('admin')->name('admin.')->group(function () {
+//         Route::get('/', [HomeController::class, 'index'])->name('home');
+//     });
+// });
