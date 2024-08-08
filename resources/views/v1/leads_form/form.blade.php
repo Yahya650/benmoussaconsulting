@@ -32,10 +32,9 @@
                                 <img src="/assets/leads_form/images/icon1.svg" alt="">
                             </div>
                         </div>
-                        <h3 class="form-title-center">املء المعلومات الاتية لاخد موعد</h3>
-                        <p class="text-center">هل تعلم أن نجاح «90٪» يأتي فقط من السلوك⚡</p>
+                        <h3 class="form-title-center">! املء المعلومات الاتية لاخد موعد</h3>
+                        <p class="text-center">هل تعلم أن نجاح «85٪» يأتي فقط من السلوك⚡</p>
                         <form id="clientForm">
-
                             <input class="form-control m-1" type="text" name="full_name" placeholder="الاسم الكامل">
                             <span id="full_name-error" class="text text-danger mt-2"></span>
 
@@ -43,7 +42,7 @@
                             <span id="phone_number-error" class="text text-danger mt-2"></span>
 
                             <input class="form-control m-1" type="text" name="phone_number_confirmation"
-                                placeholder="06*********">
+                                placeholder="تاكيد رقم الهاتف">
                             <span id="phone_number_confirmation-error" class="text text-danger mt-2"></span>
 
                             <div class="form-button" class="text text-center">
