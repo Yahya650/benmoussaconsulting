@@ -531,11 +531,11 @@
                                                                     style="padding:0;Margin:0;padding-top:15px;padding-bottom:15px">
                                                                     <h1
                                                                         style="Margin:0;font-family:arial, 'helvetica neue', helvetica, sans-serif;mso-line-height-rule:exactly;letter-spacing:0;font-size:20px;font-style:normal;font-weight:normal;line-height:24px;color:#333333">
-                                                                        <strong>Regle une rendez-vous</strong>
+                                                                        <strong>Infos Pour Prise de RDV</strong>
                                                                     </h1>
                                                                     <h1
                                                                         style="Margin:0;font-family:arial, 'helvetica neue', helvetica, sans-serif;mso-line-height-rule:exactly;letter-spacing:0;font-size:20px;font-style:normal;font-weight:normal;line-height:24px;color:#333333">
-                                                                        <strong>&nbsp;Pour : </strong>
+                                                                        {{-- <strong>&nbsp;Pour : </strong> --}}
                                                                     </h1>
                                                                 </td>
                                                             </tr>
@@ -545,6 +545,36 @@
                                                                     {{-- <p
                                                                         style="Margin:0;mso-line-height-rule:exactly;font-family:helvetica, 'helvetica neue', arial, verdana, sans-serif;line-height:24px;letter-spacing:0;color:#666666;font-size:16px;text-align:center">
                                                                         HI,&nbsp;%FIRSTNAME|% %LASTNAME|%</p> --}}
+                                                                </td>
+                                                            </tr>
+                                                            <tr style="border-collapse:collapse">
+                                                                <td align="left"
+                                                                    style="padding:0;Margin:0;padding-left:40px;padding-right:35px">
+                                                                    <p
+                                                                        style="Margin:0;mso-line-height-rule:exactly;font-family:helvetica, 'helvetica neue', arial, verdana, sans-serif;line-height:24px;letter-spacing:0;color:#666666;font-size:16px;text-align:center;display: flex">
+                                                                        <b>Campaign name :</b>
+                                                                        {{ $client->campaign_name ? $client->campaign_name : 'N/A' }}
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr style="border-collapse:collapse">
+                                                                <td align="left"
+                                                                    style="padding:0;Margin:0;padding-left:40px;padding-right:35px">
+                                                                    <p
+                                                                        style="Margin:0;mso-line-height-rule:exactly;font-family:helvetica, 'helvetica neue', arial, verdana, sans-serif;line-height:24px;letter-spacing:0;color:#666666;font-size:16px;text-align:center;display: flex">
+                                                                        <b>Adset Name :</b>
+                                                                        {{ $client->adset_name ? $client->adset_name : 'N/A' }}
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr style="border-collapse:collapse">
+                                                                <td align="left"
+                                                                    style="padding:0;Margin:0;padding-left:40px;padding-right:35px">
+                                                                    <p
+                                                                        style="Margin:0;mso-line-height-rule:exactly;font-family:helvetica, 'helvetica neue', arial, verdana, sans-serif;line-height:24px;letter-spacing:0;color:#666666;font-size:16px;text-align:center;display: flex">
+                                                                        <b>Ad Name :</b>
+                                                                        {{ $client->ad_name ? $client->ad_name : 'N/A' }}
+                                                                    </p>
                                                                 </td>
                                                             </tr>
                                                             <tr style="border-collapse:collapse">
@@ -570,7 +600,7 @@
                                                                     style="padding:0;Margin:0;padding-right:40px;padding-left:40px;padding-top:0px">
                                                                     <p
                                                                         style="Margin:0;mso-line-height-rule:exactly;font-family:helvetica, 'helvetica neue', arial, verdana, sans-serif;line-height:24px;letter-spacing:0;color:#666666;font-size:16px">
-                                                                        {{ $client->phone_number }}    
+                                                                        {{ $client->phone_number }}
                                                                     </p>
                                                                 </td>
                                                             </tr>

@@ -17,6 +17,8 @@ class ClientsController extends Controller
 
     public function PostLeadForm()
     {
+
+
         $oldClient = Client::where('phone_number', request()->phone_number)->first();
         if ($oldClient) {
             return response()->json([
@@ -28,6 +30,9 @@ class ClientsController extends Controller
             $client = new Client();
             $client->full_name = $req->full_name;
             $client->phone_number = $req->phone_number;
+            $client->campaign_name = $req->campaign_name ? $req->campaign_name : null;
+            $client->adset_name = $req->adset_name ? $req->adset_name : null;
+            $client->ad_name = $req->ad_name ? $req->ad_name : null;
             $client->created_at = now("Africa/Casablanca");
             $client->updated_at = now("Africa/Casablanca");
             $client->save();
@@ -42,8 +47,11 @@ class ClientsController extends Controller
     }
 
 
+
+
     public function showConfirmation(Request $request)
     {
+
         $client = Client::where('id', dcryptID($request->client))->first();
 
         if (!$client) {

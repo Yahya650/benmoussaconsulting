@@ -35,6 +35,11 @@
                         <h3 class="form-title-center">! يرجى ملء المعلومات التالية لأخذ موعد</h3>
                         <p class="text-center">هل تعلم أن نجاح «85٪» يأتي فقط من السلوك⚡</p>
                         <form id="clientForm">
+
+                            <input type="hidden" name="campaign_name" value="{{ request()->campaign_name }}">
+                            <input type="hidden" name="adset_name" value="{{ request()->adset_name }}">
+                            <input type="hidden" name="ad_name" value="{{ request()->ad_name }}">
+
                             <input class="form-control m-1" type="text" name="full_name" placeholder="الاسم الكامل">
                             <span id="full_name-error" class="text text-danger mt-2"></span>
 
@@ -128,6 +133,9 @@
                         _token: "{{ csrf_token() }}",
                         full_name: $('input[name=full_name]').val(),
                         phone_number: $('input[name=phone_number]').val(),
+                        campaign_name: $('input[name=campaign_name]').val(),
+                        adset_name: $('input[name=adset_name]').val(),
+                        ad_name: $('input[name=ad_name]').val(),
                     },
                     success: function(response) {
                         submitButton.html(`
