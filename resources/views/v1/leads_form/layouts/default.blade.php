@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/assets/leads_form/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="/assets/leads_form/font/flaticon.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/leads_form/css/style.css">
+    <link rel="stylesheet" href="/assets/leads_form/css/style.css?v=0.0.1">
     @yield('style')
 </head>
 
