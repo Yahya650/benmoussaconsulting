@@ -2,11 +2,6 @@
 
 @section('title', 'Request Appointment')
 
-@section('style')
-    <style>
-
-    </style>
-@endsection
 
 @section('content')
     <section class="fxt-template-animation fxt-template-layout30 " >
