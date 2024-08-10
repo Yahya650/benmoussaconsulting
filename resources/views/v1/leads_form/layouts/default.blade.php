@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>@yield('title')</title>
-    <link rel="stylesheet" type="text/css" href="/assets/leads_form/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/leads_form/css/fontawesome-all.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/leads_form/css/iofrm-style.css">
-    <link rel="stylesheet" type="text/css" href="/assets/leads_form/css/iofrm-theme27.css">
-    <script src="/web/js/jquery.js"></script>
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="/web/images/favicon1.png" type="image/x-icon">
+    <link rel="icon" href="/web/images/favicon1.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/leads_form/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/leads_form/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/assets/leads_form/font/flaticon.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/leads_form/css/style.css">
     @yield('style')
 </head>
 
@@ -21,9 +25,13 @@
 
     @include('v1.leads_form.layouts.template.footer')
 
+
+
     <script src="/assets/leads_form/js/jquery.min.js"></script>
-    <script src="/assets/leads_form/js/popper.min.js"></script>
     <script src="/assets/leads_form/js/bootstrap.min.js"></script>
+    <script src="/assets/leads_form/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/leads_form/js/star-animation.js"></script>
+    <script src="/assets/leads_form/js/validator.min.js"></script>
     <script src="/assets/leads_form/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>

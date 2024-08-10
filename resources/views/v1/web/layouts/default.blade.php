@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>CoachBen - @yield('title')</title>
+    <title>MohamedBenMoussa - @yield('title')</title>
     <!-- Stylesheets -->
     <link href="/web/css/bootstrap.css" rel="stylesheet">
     <link href="/web/css/style.css" rel="stylesheet">
@@ -11,8 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
 
-    <link rel="shortcut icon" href="/web/images/favicon.png" type="image/x-icon">
-    <link rel="icon" href="/web/images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/web/images/favicon1.png" type="image/x-icon">
+    <link rel="icon" href="/web/images/favicon1.png" type="image/x-icon">
 
     <!-- Responsive -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 

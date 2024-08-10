@@ -2,6 +2,7 @@
 
 @section('title', 'Accueil')
 @section('content')
+
     <!-- Main Slider -->
     <section class="main-slider">
         <div class="rev_slider_wrapper fullwidthbanner-container" id="rev_slider_one_wrapper" data-source="gallery">
@@ -10,6 +11,7 @@
 
                     <li data-transition="slidingoverlayhorizontal" data-description="Slide Description" data-index="rs-1688"
                         data-slotamount="default" data-thumb="/web/images/main-slider/image-1.png" data-title="Slide Title">
+
                         <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10"
                             data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina=""
                             src="/web/images/main-slider/image-1.png">
@@ -33,7 +35,7 @@
                             data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']"
                             data-frames='[{"delay":0,"split":"chars","splitdelay":0.05,"speed":2000,"frame":"0","from":"x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"power4.inOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"power3.inOut"}]'
                             style="">
-                            <h1>Coach Benmoussa <br> Relations & Développement</h1>
+                            <h1>Mohamed BenMoussa <br> Formateur international</h1>
                         </div>
 
                         <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
@@ -44,10 +46,12 @@
                             data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']"
                             data-frames='[{"delay":0,"speed":1500,"frame":"0","from":"x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;","mask":"x:[-100%];y:0;s:inherit;e:inherit;","to":"o:1;","ease":"power3.out"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"power3.inOut"}]'
                             style="">
-                            <div class="text">Apprenez à améliorer vos relations avec votre partenaire et à mieux
+                            <div class="text">
+                                Apprenez à améliorer vos relations avec votre partenaire et à mieux
                                 comprendre l'éducation sexuelle avec Benmoussa, <br> un coach certifié en comportements
-                                relationnels et développement humain. Inscrivez-vous dès aujourd'hui à des cours et des
-                                leçons.</div>
+                                relationnels et développement humain. Inscrivez-vous dès aujourd'hui à des sciences de
+                                coaching.
+                            </div>
                         </div>
 
                         <div class="tp-caption  tp-resizeme" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
@@ -59,10 +63,14 @@
                             data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
                             style="">
                             <div class="button-box">
-                                <a href="services.html" class="theme-btn btn-style-two"><span class="txt">Inscrivez-vous
-                                        maintenant</span></a>
+                                <a href="{{ route('lead_form') }}" class="theme-btn btn-style-two">
+                                    <span class="txt">
+                                        Rendez-vous
+                                    </span>
+                                </a>
                             </div>
                         </div>
+
                     </li>
                 </ul>
             </div>
@@ -70,13 +78,12 @@
     </section>
     <!-- End Main Slider -->
 
-    <!-- About Section -->
     <section id="portfolio" class="course-section-two">
         <div class="auto-container">
             <!-- Sec Title -->
             <div class="sec-title centered">
-                <div class="title color-four">Coach benmoussa</div>
-                <h2>Nos somme active sur ChadaFM</h2>
+                <div class="title color-four">Mohamed benmoussa</div>
+                <h2>Notre présence dans les médias !</h2>
             </div>
             <div class="row clearfix">
 
@@ -160,177 +167,48 @@
         </div>
     </section>
     <!-- End About Section -->
-    <!-- Course Section -->
-    <section class="course-section">
+
+    <!-- Services Section -->
+    <section class="services-section-two">
         <div class="auto-container">
             <div class="row clearfix">
 
-                <!-- Title Column -->
-                <div class="title-column col-lg-6 col-md-12 col-sm-12">
-                    <div class="inner-column">
-                        <div class="sec-title">
-                            <h2>Cours de développement personnel</h2>
-                            <div class="text">Bienvenue dans l'univers inspirant de Coach Benmoussa, un coach personnel
-                                passionné et empathique, spécialisé dans les domaines de la vie, de l'état d'esprit et des
-                                relations, y compris les relations intimes et sexuelles. À travers les ondes radio et ses
-                                cours intimes, Coach Benmoussa a aidé un grand nombre de personnes à atteindre une vie
-                                épanouissante et équilibrée.</div>
+                <!-- Service Block -->
+                <div class="service-block col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="image">
+                            <a href="services.html"><img src="/web/images/resource/service-1.jpg" alt=""></a>
                         </div>
-                        <div class="email-box">
-                            <form method="post" action="">
-                                <div class="form-group">
-                                    <span class="icon flaticon-phone-call"></span>
-                                    <input type="email" name="search-field" value=""
-                                        placeholder="Votre téléphone" required>
-                                    <button type="submit" class="theme-btn btn-style-three"><span class="txt">Prendre
-                                            Rendez-Vous</span></button>
-                                </div>
-                            </form>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- Video Column -->
-                <div class="video-column col-lg-6 col-md-12 col-sm-12">
-                    <div class="inner-column wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
-                        <div class="pattern-layer" style="background-image: url(assets/images/background/pattern-1.png)">
-                        </div>
-                        <!-- Video Box -->
-                        <div class="video-box">
-                            <figure class="video-image">
-                                <img class="transition-500ms" src="/web/images/benmoussa-radio.jpg" alt="">
-                            </figure>
-                            <a href="https://youtu.be/qNhqRJkzNgU?si=gqxCiPmoAw5xHYeY"
-                                class="lightbox-image overlay-box"><span class="transition-900ms">Play<i
-                                        class="ripple"></i></span></a>
+                        <div class="lower-content">
+                            <h5><a href="services.html">Coaching en Relations</a></h5>
+                            <div class="text">Améliorez vos relations personnelles et professionnelles avec un coaching
+                                personnalisé.</div>
                         </div>
                     </div>
                 </div>
 
-            </div>
-        </div>
-    </section>
-    <!-- End Course Section -->
-
-
-    <!-- Testimonial Section -->
-    <section class="testimonial-section">
-        <div class="auto-container">
-            <!-- Sec Title -->
-            <div class="sec-title centered">
-                <div class="title color-four">Témoignages</div>
-                <h2>Écoutez ce que mes clients <br> parle de moi.</h2>
-            </div>
-            <div class="testimonial-carousel owl-carousel owl-theme">
-
-                <!-- Testimonial Block -->
-                <div class="testimonial-block">
-                    <div class="inner-box">
-                        <div class="upper-box">
-                            <span class="quote-icon flaticon-quote-3"></span>
-                            <div class="rating">
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                            </div>
-                            <div class="text">" It’s amazing how much easier it has been to meet new people and create
-                                instant connection. I have the exact same personality, the only thing that has changed is my
-                                mindset and a few behaviors. "</div>
+                <!-- Service Block -->
+                <div class="service-block col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInUp" data-wow-delay="150ms" data-wow-duration="1500ms">
+                        <div class="image">
+                            <a href="services.html"><img src="/web/images/resource/service-2.jpg" alt=""></a>
                         </div>
-                        <div class="lower-box">
-                            <div class="box-inner">
-                                <div class="author-image">
-                                    <img src="/web/images/resource/author-1.jpg" alt="" />
-                                </div>
-                                <h5>Alaxis D. Dowson</h5>
-                                <div class="designation">Head Of Idea, Kilix Co.</div>
-                            </div>
+                        <div class="lower-content">
+                            <h5><a href="services.html">Développement Personnel</a></h5>
+                            <div class="text">Découvrez des outils et techniques pour votre croissance personnelle.</div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Testimonial Block -->
-                <div class="testimonial-block">
-                    <div class="inner-box">
-                        <div class="upper-box">
-                            <span class="quote-icon flaticon-quote-3"></span>
-                            <div class="rating">
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                            </div>
-                            <div class="text">" It’s amazing how much easier it has been to meet new people and create
-                                instant connection. I have the exact same personality, the only thing that has changed is my
-                                mindset and a few behaviors. "</div>
+                <!-- Service Block -->
+                <div class="service-block col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
+                        <div class="image">
+                            <a href="services.html"><img src="/web/images/resource/service-3.jpg" alt=""></a>
                         </div>
-                        <div class="lower-box">
-                            <div class="box-inner">
-                                <div class="author-image">
-                                    <img src="/web/images/resource/author-2.jpg" alt="" />
-                                </div>
-                                <h5>Alaxis D. Dowson</h5>
-                                <div class="designation">Head Of Idea, Kilix Co.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial Block -->
-                <div class="testimonial-block">
-                    <div class="inner-box">
-                        <div class="upper-box">
-                            <span class="quote-icon flaticon-quote-3"></span>
-                            <div class="rating">
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                            </div>
-                            <div class="text">" It’s amazing how much easier it has been to meet new people and create
-                                instant connection. I have the exact same personality, the only thing that has changed is my
-                                mindset and a few behaviors. "</div>
-                        </div>
-                        <div class="lower-box">
-                            <div class="box-inner">
-                                <div class="author-image">
-                                    <img src="/web/images/resource/author-1.jpg" alt="" />
-                                </div>
-                                <h5>Alaxis D. Dowson</h5>
-                                <div class="designation">Head Of Idea, Kilix Co.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial Block -->
-                <div class="testimonial-block">
-                    <div class="inner-box">
-                        <div class="upper-box">
-                            <span class="quote-icon flaticon-quote-3"></span>
-                            <div class="rating">
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                            </div>
-                            <div class="text">" It’s amazing how much easier it has been to meet new people and create
-                                instant connection. I have the exact same personality, the only thing that has changed is my
-                                mindset and a few behaviors. "</div>
-                        </div>
-                        <div class="lower-box">
-                            <div class="box-inner">
-                                <div class="author-image">
-                                    <img src="/web/images/resource/author-2.jpg" alt="" />
-                                </div>
-                                <h5>Alaxis D. Dowson</h5>
-                                <div class="designation">Head Of Idea, Kilix Co.</div>
+                        <div class="lower-content">
+                            <h5><a href="services.html">Éducation Sexuelle</a></h5>
+                            <div class="text">Améliorez vos connaissances en matière de santé et d'éducation sexuelle.
                             </div>
                         </div>
                     </div>
@@ -339,21 +217,6 @@
             </div>
         </div>
     </section>
-    <!-- End Testimonial Section -->
+    <!-- End Services Section -->
 
-    <!-- Course Section Two -->
-
-    <!-- End Course Section Two -->
-
-    <!-- Clients Section -->
-    <section class="clients-section">
-        <div class="auto-container">
-            <div class="row clearfix">
-
-
-
-            </div>
-        </div>
-    </section>
-    <!-- End Clients Section -->
 @endsection

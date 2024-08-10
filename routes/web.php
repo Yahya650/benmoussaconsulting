@@ -26,7 +26,7 @@ Route::namespace('web')->name('web.')->group(function () {
 });
 
 
-Route::view('/test', 'v1.mails.new_lead');
+Route::view('/test', 'welcome');
 
 Route::get('/take-appointment', [ClientsController::class, 'getLeadForm'])->name('lead_form');
 Route::post('/post-appointment', [ClientsController::class, 'postLeadForm'])->name('leads.store');

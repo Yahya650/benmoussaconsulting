@@ -9,57 +9,105 @@
 @endsection
 
 @section('content')
-    <div class="form-body without-side">
-        <div class="website-logo">
-            {{-- <a href="index.html">
-                <div class="logo">
-                    <img class="logo-size" src="/assets/leads_form/images/logo-light.svg" alt="">
-                </div>
-            </a> --}}
-        </div>
-        <div class="row">
-            <div class="img-holder">
-                <div class="bg"></div>
-                <div class="info-holder">
-                    <img src="/assets/leads_form/images/graphic8.svg" alt="">
-                </div>
+    <section class="fxt-template-animation fxt-template-layout30 " >
+        <!-- Star Animation Start Here -->
+        <canvas id="canvas"></canvas>
+        <!-- Star Animation End Here -->
+        <div class="fxt-content rounded">
+            <div class="fxt-header">
+                <a href="login-30.html" class="fxt-logo"><img src="/assets/leads_form/img/output-onlinegiftools.gif"
+                        alt="Logo"></a>
             </div>
-            <div class="form-holder">
-                <div class="form-content">
-                    <div class="form-items">
-                        <div class="form-icon">
-                            <div class="icon-holder">
-                                <img src="/assets/leads_form/images/icon1.svg" alt="">
+            <div class="fxt-form">
+                <p class="text-center">
+                    المرجو ادخال المعلومات
+                    <br>
+                    Merci de remplir le formulaire
+                </p>
+                <form id="clientForm">
+
+                    <input type="hidden" name="campaign_name" value="{{ request()->campaign_name }}">
+                    <input type="hidden" name="adset_name" value="{{ request()->adset_name }}">
+                    <input type="hidden" name="ad_name" value="{{ request()->ad_name }}">
+
+                    <div class="form-group">
+                        <div class="fxt-transformY-50 fxt-transition-delay-1">
+                            <input type="text" class="form-control" name="full_name"
+                                placeholder="الاسم الكامل / Nom complet">
+                            <span id="full_name-error" class="text text-danger mt-2"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="fxt-transformY-50 fxt-transition-delay-1">
+                            <input type="text" class="form-control" name="phone_number" placeholder="06*********">
+                            <span id="phone_number-error" class="text text-danger mt-2"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="fxt-transformY-50 fxt-transition-delay-1">
+                            <input type="text" class="form-control" name="phone_number_confirmation"
+                                placeholder="تاكيد رقم الهاتف / Confirmer le numéro de téléphone">
+                            <span id="phone_number_confirmation-error" class="text text-danger mt-2"></span>
+                        </div>
+                    </div>
+
+                    {{-- <div class="form-group">
+                        <div class="fxt-transformY-50 fxt-transition-delay-3">
+                            <div class="fxt-checkbox-area">
+                                <div class="checkbox">
+                                    <input id="checkbox1" type="checkbox">
+                                    <label for="checkbox1">Keep me logged in</label>
+                                </div>
+                                <a href="forgot-password-30.html" class="switcher-text">Forgot Password</a>
                             </div>
                         </div>
-                        <h3 class="form-title-center">! يرجى ملء المعلومات التالية لأخذ موعد</h3>
-                        <p class="text-center">هل تعلم أن نجاح «85٪» يأتي فقط من السلوك⚡</p>
-                        <form id="clientForm">
+                    </div> --}}
 
-                            <input type="hidden" name="campaign_name" value="{{ request()->campaign_name }}">
-                            <input type="hidden" name="adset_name" value="{{ request()->adset_name }}">
-                            <input type="hidden" name="ad_name" value="{{ request()->ad_name }}">
 
-                            <input class="form-control m-1" type="text" name="full_name" placeholder="الاسم الكامل">
-                            <span id="full_name-error" class="text text-danger mt-2"></span>
-
-                            <input class="form-control m-1" type="text" name="phone_number" placeholder="06*********">
-                            <span id="phone_number-error" class="text text-danger mt-2"></span>
-
-                            <input class="form-control m-1" type="text" name="phone_number_confirmation"
-                                placeholder="تاكيد رقم الهاتف">
-                            <span id="phone_number_confirmation-error" class="text text-danger mt-2"></span>
-
-                            <div class="form-button" class="text text-center">
-                                <button id="submit" type="submit" class="ibtn ibtn-full">ارسال</button>
-                                {{-- <a href="{{ route('web.home') }}" class="text text-center">الرجوع للصفحة الرئيسية</a> --}}
-                            </div>
-                        </form>
+                    <div class="form-group">
+                        <div class="fxt-transformY-50 fxt-transition-delay-4 d-flex">
+                            <button type="submit" id="submit" class="fxt-btn-fill mx-auto">ارسال / Soumettre</button>
+                        </div>
                     </div>
+                </form>
+            </div>
+            <div class="fxt-style-line">
+                <div class="fxt-transformY-50 fxt-transition-delay-5">
+                    <h3 class="mb-3">Visitez nos réseaux sociaux</h3>
+                </div>
+            </div>
+            <div class="fxt-style-line">
+                <div class="fxt-transformY-50 fxt-transition-delay-5">
+                    <h3>قم بزيارتنا على شبكات التواصل الاجتماعية</h3>
+                </div>
+            </div>
+
+            <ul class="fxt-socials d-flex justify-content-center">
+                <li class="">
+                    <a href="https://www.instagram.com/mrbenmoussamohamed/" title="Instagram" class="me-2"
+                        style="background-color: crimson;"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li class="fxt-facebook fxt-transformY-50 fxt-transition-delay-6">
+                    <a href="https://web.facebook.com/coachbenmoussa/" title="Facebook"><i
+                            class="fab fa-facebook-f"></i></a>
+                </li>
+                <li class="">
+                    <a href="https://www.tiktok.com/@mrmohamedbenmoussa/" title="TikTok" style="border: none; width: 55px">
+                        <img src="/assets/leads_form/img/tiktok-logo-on-transparent-background-free-vector-removebg-preview.png"
+                            srcset="" width="150">
+                    </a>
+                </li>
+            </ul>
+
+            <div class="fxt-footer">
+                <div class="fxt-transformY-50 fxt-transition-delay-9">
+                    {{-- <p>
+                        Don't have an account?<a href="register-30.html" class="switcher-text2 inline-text">Register</a>
+                    </p> --}}
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>

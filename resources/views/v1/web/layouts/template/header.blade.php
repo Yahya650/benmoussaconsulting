@@ -34,7 +34,7 @@
             <!-- Logo Box -->
             <div class="pull-left logo-box">
                 <div class="logo"><a href="{{ route('web.home') }}">
-                        <img src="/web/images/CoachBen.png" alt="" title="">
+                        <img src="/web/Sans titre-2.png" width="100px" alt="" title="">
                         {{-- Mohamed BenMoussa --}}
                     </a></div>
             </div>
