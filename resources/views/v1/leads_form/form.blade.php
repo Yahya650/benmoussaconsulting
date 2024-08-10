@@ -4,7 +4,7 @@
 
 
 @section('content')
-    <section class="fxt-template-animation fxt-template-layout30 " >
+    <section class="fxt-template-animation fxt-template-layout30 ">
         <!-- Star Animation Start Here -->
         <canvas id="canvas"></canvas>
         <!-- Star Animation End Here -->
@@ -61,7 +61,8 @@
 
                     <div class="form-group">
                         <div class="fxt-transformY-50 fxt-transition-delay-4 d-flex">
-                            <button type="submit" id="submit" class="fxt-btn-fill mx-auto" style="background-color: #168bf8">ارسال / Soumettre</button>
+                            <button type="submit" id="submit" class="fxt-btn-fill mx-auto"
+                                style="background-color: #168bf8">ارسال / Soumettre</button>
                         </div>
                     </div>
                 </form>
@@ -88,7 +89,7 @@
                 </li>
                 <li class="">
                     <a href="https://www.tiktok.com/@mrmohamedbenmoussa/" title="TikTok" style="border: none; width: 41px">
-                        <img src="/assets/leads_form/img/tiktok-logo-on-transparent-background-free-vector-removebg-preview.png"
+                        <img src="/assets/leads_form/img/tiktok-logo-on-transparent-background-free-vector-removebg-preview1.png"
                             srcset="" width="150">
                     </a>
                 </li>
