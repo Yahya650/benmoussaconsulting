@@ -79,7 +79,7 @@
 
             <ul class="fxt-socials d-flex justify-content-center">
                 <li class="">
-                    <a href="https://www.instagram.com/mrbenmoussamohamed/" title="Instagram" class="me-2"
+                    <a href="https://www.instagram.com/mrbenmoussamohamed/" title="Instagram"
                         style="background-color: crimson;"><i class="fab fa-instagram"></i></a>
                 </li>
                 <li class="fxt-facebook fxt-transformY-50 fxt-transition-delay-6">
@@ -87,7 +87,7 @@
                             class="fab fa-facebook-f"></i></a>
                 </li>
                 <li class="">
-                    <a href="https://www.tiktok.com/@mrmohamedbenmoussa/" title="TikTok" style="border: none; width: 55px">
+                    <a href="https://www.tiktok.com/@mrmohamedbenmoussa/" title="TikTok" style="border: none; width: 40px">
                         <img src="/assets/leads_form/img/tiktok-logo-on-transparent-background-free-vector-removebg-preview.png"
                             srcset="" width="150">
                     </a>
