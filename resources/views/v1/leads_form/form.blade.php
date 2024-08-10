@@ -87,7 +87,7 @@
                             class="fab fa-facebook-f"></i></a>
                 </li>
                 <li class="">
-                    <a href="https://www.tiktok.com/@mrmohamedbenmoussa/" title="TikTok" style="border: none; width: 40px">
+                    <a href="https://www.tiktok.com/@mrmohamedbenmoussa/" title="TikTok" style="border: none; width: 41px">
                         <img src="/assets/leads_form/img/tiktok-logo-on-transparent-background-free-vector-removebg-preview.png"
                             srcset="" width="150">
                     </a>
