@@ -61,7 +61,7 @@
 
                     <div class="form-group">
                         <div class="fxt-transformY-50 fxt-transition-delay-4 d-flex">
-                            <button type="submit" id="submit" class="fxt-btn-fill mx-auto">ارسال / Soumettre</button>
+                            <button type="submit" id="submit" class="fxt-btn-fill mx-auto" style="background-color: #168bf8">ارسال / Soumettre</button>
                         </div>
                     </div>
                 </form>
