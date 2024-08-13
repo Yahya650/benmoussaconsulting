@@ -75,9 +75,6 @@
                             <li class="">
                                 <a href="{{ route('lead_form') }}">Prendre Rendez-Vous</a>
                             </li>
-                            {{-- <li class="">
-                                <a href="{{ route('web.coaching.types') }}">Types de coaching</a>
-                            </li> --}}
                             <li class="">
                                 <a href="{{ route('web.contact') }}">Contactez-nous</a>
                             </li>
@@ -97,14 +94,14 @@
 
     <!-- Sticky Header  -->
     <div class="sticky-header">
-        <div class="auto-container clearfix">
+        <div class="auto-container clearfix d-flex align-items-center justify-content-between">
             <!--Logo-->
             <div class="logo pull-left">
-                <a href="index.html" title=""><img src="/assets/images/logo-small.png" alt=""
-                        title=""></a>
+                <a href="{{ route('web.home') }}" title=""><img src="/web/Sans titre-2.png" alt=""
+                        width="100px" title=""></a>
             </div>
             <!--Right Col-->
-            <div class="pull-right">
+            <div class="pull-right d-flex justify-content-end w-100">
 
                 <!-- Main Menu -->
                 <nav class="main-menu">
@@ -125,8 +122,8 @@
         <div class="close-btn"><span class="icon flaticon-multiply"></span></div>
 
         <nav class="menu-box">
-            <div class="nav-logo"><a href="index.html"><img src="/assets/images/logo-small.png" alt=""
-                        title=""></a></div>
+            <div class="nav-logo"><a href="{{ route('web.home') }}"><img src="/web/Sans titre-2.png" width="100px"
+                        alt="" title=""></a></div>
             <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
             </div>
         </nav>

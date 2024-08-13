@@ -178,11 +178,13 @@
                     <div class="inner-column">
                         <div class="sec-title">
                             <h2>Cours de développement personnel</h2>
-                            <div class="text">Bienvenue dans l'univers inspirant de Coach Benmoussa, un coach personnel
-                                passionné et empathique, spécialisé dans les domaines de la vie, de l'état d'esprit et des
-                                relations, y compris les relations intimes et sexuelles. À travers les ondes radio et ses
-                                cours intimes, Coach Benmoussa a aidé un grand nombre de personnes à atteindre une vie
-                                épanouissante et équilibrée.</div>
+                            <div class="text">
+                                Bienvenue dans l'univers inspirant de Mohamed BenMoussa, un coach personnel passionné et
+                                empathique, spécialisé dans les domaines de la vie, de l'état d'esprit et des relations, y
+                                compris les relations intimes et sexuelles. À travers les ondes radio et ses cours intimes,
+                                Mohamed BenMoussa a aidé un grand nombre de personnes à atteindre une vie épanouissante et
+                                équilibrée.
+                            </div>
                         </div>
                         <div class="email-box">
                             <form method="post" action="">
@@ -190,7 +192,8 @@
                                     <span class="icon flaticon-phone-call"></span>
                                     <input type="email" name="search-field" value=""
                                         placeholder="Votre téléphone" required>
-                                    <button type="submit" class="theme-btn btn-style-three"><span class="txt">Prendre Rendez-Vous</span></button>
+                                    <button type="submit" class="theme-btn btn-style-three"><span class="txt">Prendre
+                                            Rendez-Vous</span></button>
                                 </div>
                             </form>
                         </div>

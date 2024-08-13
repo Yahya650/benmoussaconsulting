@@ -72,10 +72,10 @@
                 <div class="image-column col-lg-6 col-md-12 col-sm-12">
                     <div class="inner-column">
                         <div class="image">
-                            <img src="/web/images/resource/contact-1.jpg" alt="" />
+                            <img src="/web/images/coach-chada-3.jpg" alt="" width="260px" />
                         </div>
                         <div class="image-two">
-                            <img src="/web/images/resource/contact-2.jpg" alt="" />
+                            <img src="/web/images/DSC06838 cropped.JPG" alt="" width="400px" />
                         </div>
                     </div>
                 </div>
