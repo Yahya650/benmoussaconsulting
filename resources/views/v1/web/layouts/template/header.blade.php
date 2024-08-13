@@ -17,16 +17,31 @@
                 <div class="top-right pull-right clearfix">
                     <!-- Social Box -->
                     <ul class="social-box">
-                        <li><a href="https://web.facebook.com/coachbenmoussa/" class="fa fa-facebook-f"></a></li>
-                        {{-- <li><a href="https://www.twitter.com/" class="fa fa-twitter"></a></li> --}}
-                        <li><a href="https://wa.me/212665228542" class="fa fa-telephone">
-                                <i class="bi bi-telephone-forward"></i>
-                            </a></li>
-                        <li><a href="https://wa.me/212665228542" class="fa fa-whatsapp"></a></li>
-                        <li><a href="https://www.instagram.com/mrbenmoussamohamed/" class="fa fa-instagram"></a></li>
-                        {{-- <li><a href="https://www.behance.com/" class="fa fa-behance"></a></li> --}}
-                        {{-- <li><a href="https://www.linkedin.com/" class="fa fa-linkedin"></a></li> --}}
-                        {{-- <li><a href="https://youtube.com/" class="fa fa-youtube-play"></a></li> --}}
+                        <li>
+                            <a href="https://web.facebook.com/coachbenmoussa/">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+212520816447">
+                                <i class="fa-solid fa-phone-volume"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.tiktok.com/@mrbenmoussamohamed/">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/212665228542">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/mrbenmoussamohamed/">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
                     </ul>
                     {{-- <div class="text">Pour Contacter-nous :
                         <a href="tel:+212520816447">+212 520-816447</a> /
