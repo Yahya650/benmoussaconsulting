@@ -49,7 +49,7 @@
                             <div class="text">
                                 Apprenez à améliorer vos relations avec votre partenaire et à mieux
                                 comprendre l'éducation sexuelle avec Benmoussa, <br> un coach certifié en comportements
-                                relationnels et développement humain. Inscrivez-vous dès aujourd'hui à des sciences de
+                                relationnels et développement humain. Inscrivez-vous dès aujourd'hui à des séances de
                                 coaching.
                             </div>
                         </div>
@@ -187,13 +187,17 @@
                             </div>
                         </div>
                         <div class="email-box">
-                            <form method="post" action="">
+                            <form id="accuill-form">
                                 <div class="form-group">
                                     <span class="icon flaticon-phone-call"></span>
-                                    <input type="email" name="search-field" value=""
-                                        placeholder="Votre téléphone" required>
-                                    <button type="submit" class="theme-btn btn-style-three"><span class="txt">Prendre
-                                            Rendez-Vous</span></button>
+                                    <input type="text" name="phone_number-accuill-form" placeholder="Votre téléphone">
+                                    <span id="phone_number-accuill-form-error" class="text text-danger"></span>
+                                    <button type="submit" class="theme-btn btn-style-three"
+                                        id="accuill-form-btn-submit">
+                                        <span class="txt">
+                                            Prendre Rendez-Vous
+                                        </span>
+                                    </button>
                                 </div>
                             </form>
                         </div>
@@ -350,5 +354,73 @@
         </div>
     </section> --}}
     <!-- End Testimonial Section -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#accuill-form').on('submit', function(e) {
+                e.preventDefault();
+
+                const form = $(this);
+                const submitButton = $('#accuill-form-btn-submit');
+
+                if (!$('input[name=phone_number-accuill-form]').val() || !/^\d+$/.test($(
+                        'input[name=phone_number-accuill-form]').val())) {
+                    $('input[name=phone_number-accuill-form]').addClass('is-invalid');
+                    $('#phone_number-accuill-form-error').text(
+                        "SVP, veuillez entrer votre numéro de telephone");
+                    return;
+                } else {
+                    $('input[name=phone_number-accuill-form]').removeClass('is-invalid');
+                    $('#phone_number-accuill-form-error').text("");
+                }
+
+                if ($('input[name=phone_number-accuill-form]').val().length != 10 || !/^\d+$/.test($(
+                        'input[name=phone_number-accuill-form]').val())) {
+                    $('input[name=phone_number-accuill-form]').addClass('is-invalid');
+                    $('#phone_number-accuill-form-error').text(
+                        "SVP, veuillez entrer un numéro de telephone valide");
+                    return;
+                } else {
+                    $('input[name=phone_number-accuill-form]').removeClass('is-invalid');
+                    $('#phone_number-accuill-form-error').text("");
+                }
+
+                submitButton.html(`
+                    <i class="fa fa-spinner fa-pulse"></i>
+                    `).css("cursor", "not-allowed").attr("disabled", true);
+
+                $.ajax({
+                    type: "POST",
+                    url: "{{ route('leads.store') }}",
+                    data: {
+                        _token: "{{ csrf_token() }}",
+                        // full_name: $('input[name=full_name]').val(),
+                        phone_number: $('input[name=phone_number-accuill-form]').val(),
+                    },
+                    success: function(response) {
+                        submitButton.html("Prendre Rendez-Vous").attr("disabled", false).css(
+                            "cursor",
+                            "pointer");
+                        Swal.fire({
+                            icon: "success",
+                            title: "Félicitation",
+                            html: "Votre numero de telephone a été envoyé avec succès.",
+                        });
+                    },
+                    error: function(res, status, error) {
+                        submitButton.text("Prendre Rendez-Vous").attr("disabled", false).css(
+                            "cursor",
+                            "pointer");
+                        Swal.fire({
+                            icon: "error",
+                            title: "Oops...",
+                            html: res.responseJSON.message,
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 
 @endsection

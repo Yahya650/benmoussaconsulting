@@ -6,7 +6,7 @@
             <div class="inner-container clearfix">
                 <!-- Top Left -->
                 <div class="top-left clearfix">
-                    <div class="text"><span>Temps de travail:</span>
+                    <div class="text"><span>Horaires de travail:</span>
                         Lundi -> 14:00 - 19:30 /
                         Mardi-Vendredi -> 09:30 - 19:30 /
                         Samedi -> 9:30 - 13:30

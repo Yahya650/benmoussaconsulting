@@ -28,7 +28,7 @@ class ClientsController extends Controller
         try {
             $req = request();
             $client = new Client();
-            $client->full_name = $req->full_name;
+            $client->full_name = $req->full_name ? $req->full_name : null;
             $client->phone_number = $req->phone_number;
             $client->campaign_name = $req->campaign_name ? $req->campaign_name : null;
             $client->adset_name = $req->adset_name ? $req->adset_name : null;

@@ -83,13 +83,17 @@
                                 <h5>Nous vous appeler</h5>
                                 <!-- Newsletter Form -->
                                 <div class="newsletter-form">
-                                    <form method="post" action="contact.html">
+                                    <form id="footer-form">
                                         <div class="form-group">
                                             <span class="icon flaticon-phone-call"></span>
-                                            <input type="text" name="search-field" placeholder="Votre téléphone"
-                                                required>
-                                            <button type="submit" class="theme-btn submit-btn">Prendre Rendez-Vous<span
-                                                    class="arrow flaticon-right-arrow-1"></span></button>
+                                            <input type="text" name="phone_number-footer-form"
+                                                placeholder="Votre téléphone">
+                                            <span id="phone_number-footer-form-error" class="text text-danger"></span>
+                                            <button type="submit" id="footer-form-btn-submit"
+                                                class="theme-btn submit-btn">
+                                                Prendre Rendez-Vous
+                                                <span class="arrow flaticon-right-arrow-1"></span>
+                                            </button>
                                         </div>
                                     </form>
                                 </div>
@@ -102,16 +106,72 @@
             </div>
         </div>
 
-        {{-- <div class="footer-bottom">
-            <div class="clearfix">
-                <div class="pull-left">
-                    <div class="copyright">Copyright &copy; <a href="#">Wecodeit</a> - 2023</div>
-                </div>
-                <div class="pull-right">
-                    <div class="payments"><img src="/assets/images/icons/payment.png" alt="" /></div>
-                </div>
-            </div>
-        </div> --}}
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#footer-form').on('submit', function(e) {
+                    e.preventDefault();
+
+                    const form = $(this);
+                    const submitButton = $('#footer-form-btn-submit');
+
+                    if (!$('input[name=phone_number-footer-form]').val()) {
+                        $('input[name=phone_number-footer-form]').addClass('is-invalid');
+                        $('#phone_number-footer-form-error').text(
+                            "SVP, veuillez entrer votre numéro de telephone");
+                        return;
+                    } else {
+                        $('input[name=phone_number-footer-form]').removeClass('is-invalid');
+                        $('#phone_number-footer-form-error').text("");
+                    }
+
+                    if ($('input[name=phone_number-footer-form]').val().length != 10 || !/^\d+$/.test($(
+                            'input[name=phone_number-footer-form]').val())) {
+                        $('input[name=phone_number-footer-form]').addClass('is-invalid');
+                        $('#phone_number-footer-form-error').text(
+                            "SVP, veuillez entrer un numéro de telephone valide");
+                        return;
+                    } else {
+                        $('input[name=phone_number-footer-form]').removeClass('is-invalid');
+                        $('#phone_number-footer-form-error').text("");
+                    }
+
+                    submitButton.html(`
+                    <i class="fa fa-spinner fa-pulse"></i>
+                    `).css("cursor", "not-allowed").attr("disabled", true);
+
+                    $.ajax({
+                        type: "POST",
+                        url: "{{ route('leads.store') }}",
+                        data: {
+                            _token: "{{ csrf_token() }}",
+                            // full_name: $('input[name=full_name]').val(),
+                            phone_number: $('input[name=phone_number-footer-form]').val(),
+                        },
+                        success: function(response) {
+                            submitButton.html("Prendre Rendez-Vous").attr("disabled", false).css(
+                                "cursor",
+                                "pointer");
+                            Swal.fire({
+                                icon: "success",
+                                title: "Félicitation",
+                                html: "Votre numero de telephone a été envoyé avec succès.",
+                            });
+                        },
+                        error: function(res, status, error) {
+                            submitButton.text("Prendre Rendez-Vous").attr("disabled", false).css(
+                                "cursor",
+                                "pointer");
+                            Swal.fire({
+                                icon: "error",
+                                title: "Oops...",
+                                html: res.responseJSON.message,
+                            });
+                        }
+                    });
+                });
+            });
+        </script>
 
     </div>
 </footer>

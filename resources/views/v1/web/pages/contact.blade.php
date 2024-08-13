@@ -164,22 +164,22 @@
                     },
                     success: function(response) {
                         submitButton.html(`
-                        ارسال
+                            <i class="fa fa-paper-plane"></i>
                         `).attr("disabled", false).css("cursor",
                             "pointer");
 
                         Swal.fire({
                             icon: "success",
-                            title: "تم الارسال بنجاح",
+                            title: "Félicitation",
                             html: response.message,
                         });
                     },
                     error: function(res, status, error) {
-                        submitButton.text("ارسال").attr("disabled", false).css("cursor",
+                        submitButton.text("Envoyer").attr("disabled", false).css("cursor",
                             "pointer");
                         Swal.fire({
                             icon: "error",
-                            title: "حدث خطأ...",
+                            title: "Oops...",
                             html: res.responseJSON.message,
                         });
                     }
