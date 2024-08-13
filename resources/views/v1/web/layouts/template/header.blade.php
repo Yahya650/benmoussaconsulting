@@ -6,21 +6,32 @@
             <div class="inner-container clearfix">
                 <!-- Top Left -->
                 <div class="top-left clearfix">
-                    <div class="text"><span>Temps de travail:</span> Du lundi au vendredi de 9h30min à 20h</div>
+                    <div class="text"><span>Temps de travail:</span>
+                        Lundi -> 14:00 - 19:30 /
+                        Mardi-Vendredi -> 09:30 - 19:30 /
+                        Samedi -> 9:30 - 13:30
+                    </div>
                 </div>
 
                 <!-- Top Right -->
                 <div class="top-right pull-right clearfix">
                     <!-- Social Box -->
                     <ul class="social-box">
-                        <li><a href="https://www.facebook.com/" class="fa fa-facebook-f"></a></li>
-                        <li><a href="https://www.twitter.com/" class="fa fa-twitter"></a></li>
-                        <li><a href="https://www.behance.com/" class="fa fa-behance"></a></li>
-                        <li><a href="https://www.linkedin.com/" class="fa fa-linkedin"></a></li>
-                        <li><a href="https://youtube.com/" class="fa fa-youtube-play"></a></li>
+                        <li><a href="https://web.facebook.com/coachbenmoussa/" class="fa fa-facebook-f"></a></li>
+                        {{-- <li><a href="https://www.twitter.com/" class="fa fa-twitter"></a></li> --}}
+                        <li><a href="https://wa.me/212665228542" class="fa fa-telephone">
+                                <i class="bi bi-telephone-forward"></i>
+                            </a></li>
+                        <li><a href="https://wa.me/212665228542" class="fa fa-whatsapp"></a></li>
+                        <li><a href="https://www.instagram.com/mrbenmoussamohamed/" class="fa fa-instagram"></a></li>
+                        {{-- <li><a href="https://www.behance.com/" class="fa fa-behance"></a></li> --}}
+                        {{-- <li><a href="https://www.linkedin.com/" class="fa fa-linkedin"></a></li> --}}
+                        {{-- <li><a href="https://youtube.com/" class="fa fa-youtube-play"></a></li> --}}
                     </ul>
-                    {{-- <div class="text">Appelez pour une consultation gratuite: <a
-                            href="tel:++212663520502">+212 663-520502</a></div> --}}
+                    {{-- <div class="text">Pour Contacter-nous :
+                        <a href="tel:+212520816447">+212 520-816447</a> /
+                        <a href="https://wa.me/212665228542">+212 665-228542</a>
+                    </div> --}}
                 </div>
 
             </div>
@@ -62,11 +73,11 @@
                                 <a href="{{ route('web.home') }}">Accueil</a>
                             </li>
                             <li class="">
-                                <a href="{{ route('lead_form') }}">Rendez-vous</a>
+                                <a href="{{ route('lead_form') }}">Prendre Rendez-Vous</a>
                             </li>
-                            <li class="">
+                            {{-- <li class="">
                                 <a href="{{ route('web.coaching.types') }}">Types de coaching</a>
-                            </li>
+                            </li> --}}
                             <li class="">
                                 <a href="{{ route('web.contact') }}">Contactez-nous</a>
                             </li>

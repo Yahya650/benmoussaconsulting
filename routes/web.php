@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Mail;
 // use App\Http\Controllers\v1\dashboard\auth\AuthController;
 // use App\Http\Controllers\v1\dashboard\admin\home\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\v1\web\MessageController;
 use App\Http\Controllers\v1\leads_form\ClientsController;
 use App\Http\Controllers\v1\web\HomeController as WebHomeController;
 
@@ -28,6 +29,7 @@ Route::namespace('web')->name('web.')->group(function () {
 
 Route::view('/test', 'welcome');
 
+Route::post('/send-message', [MessageController::class, 'sendMessage'])->name('send.message');
 Route::get('/take-appointment', [ClientsController::class, 'getLeadForm'])->name('lead_form');
 Route::post('/post-appointment', [ClientsController::class, 'postLeadForm'])->name('leads.store');
 Route::get('/confirmation-message', [ClientsController::class, 'showConfirmation'])->name('confirmation.message');

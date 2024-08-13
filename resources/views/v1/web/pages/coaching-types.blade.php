@@ -7,7 +7,7 @@
         <div class="auto-container">
             <div class="content">
                 <div class="text">Types de coaching individuel</div>
-                <h1>Coach Benmoussa</h1>
+                <h1>Mohamed BenMoussa</h1>
             </div>
             <div class="breadcrumb-outer">
                 <ul class="page-breadcrumb">
@@ -18,21 +18,22 @@
         </div>
     </section>
     <!-- End Page Title Section -->
-    <!-- Expérience Section -->
-    <section class="experience-section">
+
+    <!-- Experiance Section -->
+    <section class="experiance-section">
         <div class="auto-container">
             <div class="row clearfix">
 
-                <!-- Expérience Column -->
-                <div class="experience-column col-lg-5 col-md-12 col-sm-12">
+                <!-- Experiance Column -->
+                <div class="experiance-column col-lg-5 col-md-12 col-sm-12">
                     <div class="inner-column wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-                        <div class="experience">
+                        <div class="experiance">
                             <img src="/web/images/psychology.jpg" alt="" />
                         </div>
-                        <div class="peoples">Trouver un équilibre vie privée / vie professionnelle</div>
+                        <div class="peoples">Avoir un équilibre vie privée / vie professionnelle</div>
                         <div class="text-center">
-                            <a href="tel:+212-663-520502" class="theme-btn phone-btn"><span
-                                    class="icon flaticon-call"></span>+212 663-520502</a>
+                            <a href="tel:+212520816447" class="theme-btn phone-btn"><span
+                                    class="icon flaticon-call"></span>+212 520-816447</a>
                         </div>
                     </div>
                 </div>
@@ -50,8 +51,8 @@
                                         <div class="content">
                                             <div class="icon flaticon-work-table"></div>
                                             <h5>Coaching de développement</h5>
-                                            <div class="text">Ce type de coaching est idéal pour les situations de prise
-                                                de poste.</div>
+                                            <div class="text">Ce type de coaching convient aux situations de prise de
+                                                poste.</div>
                                         </div>
                                     </div>
                                 </div>
@@ -62,8 +63,7 @@
                                         <div class="content">
                                             <div class="icon flaticon-notepad"></div>
                                             <h5>Coaching de prise de décision</h5>
-                                            <div class="text">Aider à clarifier et conscientiser le processus de décision.
-                                            </div>
+                                            <div class="text">Conscientiser son processus de décision.</div>
                                         </div>
                                     </div>
                                 </div>
@@ -74,8 +74,8 @@
                                         <div class="content">
                                             <div class="icon flaticon-globe-1"></div>
                                             <h5>Coaching de crise</h5>
-                                            <div class="text">Un coaching de courte durée avec des séances rapprochées
-                                                pour gérer les crises.</div>
+                                            <div class="text">C’est un coaching de courte durée avec des séances
+                                                rapprochées.</div>
                                         </div>
                                     </div>
                                 </div>
@@ -90,8 +90,7 @@
                                         <div class="content">
                                             <div class="icon flaticon-science-research"></div>
                                             <h5>Coaching de soutien</h5>
-                                            <div class="text">Accompagner les personnes ayant vécu des situations
-                                                difficiles.</div>
+                                            <div class="text">La personne a vécu une situation dramatique.</div>
                                         </div>
                                     </div>
                                 </div>
@@ -102,8 +101,7 @@
                                         <div class="content">
                                             <div class="icon flaticon-trophy"></div>
                                             <h5>Coaching de transition</h5>
-                                            <div class="text">Soutenir les individus en phase de transition
-                                                professionnelle.</div>
+                                            <div class="text">La personne est en transition professionnelle.</div>
                                         </div>
                                     </div>
                                 </div>
@@ -116,9 +114,9 @@
             </div>
         </div>
     </section>
-    <!-- End Expérience Section -->
+    <!-- End Experiance Section -->
     <!-- Skill Section -->
-    <section class="skill-section">
+    <section class="skill-section pt-0">
         <div class="auto-container">
             <div class="row clearfix">
                 <!-- Skill Column -->
@@ -128,9 +126,9 @@
                         <div class="sec-title">
                             <div class="title color-three">Coach Benmoussa</div>
                             <h2>Qu'est-ce qu'un coaching professionnel ?</h2>
-                            <div class="text">Le coaching professionnel permet au coaché d’explorer sa dimension
-                                personnelle au sein de son environnement professionnel, en mettant en avant sa singularité
-                                au cœur de sa carrière.</div>
+                            <div class="text">Dans le coaching professionnel, le coach appréhende donc le coaché en tant
+                                qu’individu membre d’un groupe professionnel. Il s’intéresse exclusivement à sa dimension
+                                personnelle immergée dans sa dimension professionnelle.</div>
                         </div>
 
                         <!-- Skills -->
@@ -138,7 +136,7 @@
                             <!-- Skill Item -->
                             <div class="skill-item">
                                 <div class="skill-header clearfix">
-                                    <div class="skill-title">Soutien émotionnel et stratégies de gestion</div>
+                                    <div class="skill-title">Soutien émotionnel et stratégies de gestion </div>
                                 </div>
                                 <div class="skill-bar">
                                     <div class="bar-inner">
@@ -204,4 +202,30 @@
         </div>
     </section>
     <!-- End Skill Section -->
+
+    {{-- <!-- Sponsors Section -->
+    <section class="sponsors-section">
+		<div class="big-text">Clients</div>
+        <div class="auto-container">
+            <div class="sponsors-outer">
+                <!-- Sponsors Carousel -->
+                <ul class="sponsors-carousel owl-carousel owl-theme">
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img width="20%" src="/web/images/chadafm.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img width="20%" src="/web/images/telemaroc.jpg" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="/we/images/clients/3.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="/assets/images/clients/4.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="/assets/images/clients/5.png" alt=""></a></figure></li>
+					<li class="slide-item"><figure class="image-box"><a href="#"><img src="/assets/images/clients/6.png" alt=""></a></figure></li>
+					<li class="slide-item"><figure class="image-box"><a href="#"><img src="/assets/images/clients/1.png" alt=""></a></figure></li>
+					<li class="slide-item"><figure class="image-box"><a href="#"><img src="/assets/images/clients/2.png" alt=""></a></figure></li>
+					<li class="slide-item"><figure class="image-box"><a href="#"><img src="/assets/images/clients/3.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="/assets/images/clients/4.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="/assets/images/clients/5.png" alt=""></a></figure></li>
+					<li class="slide-item"><figure class="image-box"><a href="#"><img src="/assets/images/clients/6.png" alt=""></a></figure></li>
+                </ul>
+            </div>
+            
+        </div>
+    </section> --}}
+    <!-- End Sponsors Section -->
 @endsection

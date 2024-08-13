@@ -15,11 +15,14 @@
     <link rel="icon" href="/web/images/favicon1.png" type="image/x-icon">
 
     <!-- Responsive -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9533486053157001"
-     crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
 </head>
+
+
+
 
 <body class="hidden-bar-wrapper">
 
@@ -92,6 +95,8 @@
     <script src="/web/js/nav-tool.js"></script>
     <script src="/web/js/jquery-ui.js"></script>
     <script src="/web/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
 </body>
 

@@ -11,10 +11,15 @@
                         <!-- Footer Column -->
                         <div class="footer-column col-lg-6 col-md-6 col-sm-12">
                             <div class="footer-widget logo-widget">
-                                <div class="logo">
-                                    <a href="index.html"><img src="/assets/images/footer-logo.png" alt="" /></a>
+                                <div class="">
+                                    <a href="{{ route('web.home') }}"><img src="/web/Sans titre-2.png" width="100px"
+                                            alt="" title=""></a>
                                 </div>
-                                <div class="text">Coach Benmoussa est bien plus qu'un coach ordinaire. Avec des années d'expérience et une compréhension profonde des complexités de la vie moderne, il offre des conseils perspicaces et des stratégies pratiques pour aider les individus à surmonter les obstacles, à développer un état d'esprit positif et à établir des relations significatives et épanouissantes.</div>
+                                <div class="text">Coach Benmoussa est bien plus qu'un coach ordinaire. Avec des années
+                                    d'expérience et une compréhension profonde des complexités de la vie moderne, il
+                                    offre des conseils perspicaces et des stratégies pratiques pour aider les individus
+                                    à surmonter les obstacles, à développer un état d'esprit positif et à établir des
+                                    relations significatives et épanouissantes.</div>
                             </div>
                         </div>
 
@@ -26,12 +31,21 @@
                                     <!-- Column -->
                                     <div class="column col-lg-6 col-md-6 col-sm-12">
                                         <ul class="list-link">
-                                            <li><a href="#">Accueil</a></li> 
-                                            <li><a href="#">Cours gratuits</a></li>
-                                            <li><a href="#">Contactez-nous</a></li> 
+                                            <li class="">
+                                                <a href="{{ route('web.home') }}">Accueil</a>
+                                            </li>
+                                            <li class="">
+                                                <a href="{{ route('lead_form') }}">Prendre Rendez-Vous</a>
+                                            </li>
+                                            {{-- <li class="">
+                                                <a href="{{ route('web.coaching.types') }}">Types de coaching</a>
+                                            </li> --}}
+                                            <li class="">
+                                                <a href="{{ route('web.contact') }}">Contactez-nous</a>
+                                            </li>
                                         </ul>
                                     </div>
-                                   
+
                                 </div>
                             </div>
                         </div>
@@ -48,7 +62,28 @@
                             <div class="footer-widget info-widget">
                                 <h5>Entrer en contact</h5>
                                 <ul class="contact-info-list">
-                                    <li><span>Notre bureau</span><a href="#"> Rue Rouissi, Residence Oasis Imm A Appt N2</a></li>
+                                    <li><span>Notre bureau</span><a href="#"> 13 Rue Aomr EL KHAYAM Rés Yasmine B
+                                            ETG 3 Num 13</a></li>
+                                </ul>
+                                <ul class="contact-info-list">
+                                    <li><span>Email</span><a style="font-size: 15px; text-decoration: underline"
+                                            href="mailto:contact@benmoussaconsulting.com">
+                                            contact@benmoussaconsulting.com
+                                        </a></li>
+                                </ul>
+                                <ul class="contact-info-list">
+                                    <li>
+                                        <span>Telephone</span>
+                                        <a style="font-size: 15px; text-decoration: underline" href="tel:+212520816447">
+                                            +212 520-816447
+                                        </a>
+                                        <br>
+                                        <span class="mt-2">Whatsapp</span>
+                                        <a style="font-size: 15px; text-decoration: underline"
+                                            href="https://wa.me/212665228542">
+                                            +212 665-228542
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -62,8 +97,10 @@
                                     <form method="post" action="contact.html">
                                         <div class="form-group">
                                             <span class="icon flaticon-phone-call"></span>
-                                            <input type="text" name="search-field" value="" placeholder="Votre téléphone" required>
-                                            <button type="submit" class="theme-btn submit-btn">Prendre Rendez-Vous<span class="arrow flaticon-right-arrow-1"></span></button>
+                                            <input type="text" name="search-field" value=""
+                                                placeholder="Votre téléphone" required>
+                                            <button type="submit" class="theme-btn submit-btn">Prendre Rendez-Vous<span
+                                                    class="arrow flaticon-right-arrow-1"></span></button>
                                         </div>
                                     </form>
                                 </div>
@@ -76,7 +113,7 @@
             </div>
         </div>
 
-        <div class="footer-bottom">
+        {{-- <div class="footer-bottom">
             <div class="clearfix">
                 <div class="pull-left">
                     <div class="copyright">Copyright By &copy; <a href="#">Wecodeit</a> - 2023</div>
@@ -85,7 +122,7 @@
                     <div class="payments"><img src="/assets/images/icons/payment.png" alt="" /></div>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
     </div>
 </footer>
