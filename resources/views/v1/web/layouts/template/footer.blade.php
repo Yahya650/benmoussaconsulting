@@ -53,7 +53,7 @@
                         <!-- Footer Column -->
                         <div class="footer-column col-lg-6 col-md-6 col-sm-12">
                             <div class="footer-widget info-widget">
-                                <h5>Entrer en contact</h5>
+                                <h5>Entrez en contact avec nous</h5>
                                 <ul class="contact-info-list">
                                     <li><span>Notre bureau</span><a href="#"> 13 Rue Aomr EL KHAYAM Rés Yasmine B
                                             ETG 3 Num 13</a></li>
@@ -80,7 +80,7 @@
                         <!-- Footer Column -->
                         <div class="footer-column col-lg-6 col-md-6 col-sm-12">
                             <div class="footer-widget newsletter-widget">
-                                <h5>Nous vous appeler</h5>
+                                <h5>Nous vous appellerons</h5>
                                 <!-- Newsletter Form -->
                                 <div class="newsletter-form">
                                     <form id="footer-form">

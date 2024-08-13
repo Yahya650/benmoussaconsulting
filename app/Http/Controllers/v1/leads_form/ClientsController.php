@@ -2,17 +2,31 @@
 
 namespace App\Http\Controllers\v1\leads_form;
 
-use App\Http\Controllers\Controller;
 use App\Models\Client;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
 use App\Mail\NewLeadNotifMail;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Mail;
+use RalphJSmit\Laravel\SEO\Support\SEOData;
 
 class ClientsController extends Controller
 {
     public function getLeadForm()
     {
-        return view('v1.leads_form.form');
+
+        $seoData = new SEOData(
+            description: "Mohamed BenMoussa est bien plus qu'un coach ordinaire. Avec des années d'expérience et une compréhension profonde des complexités de la vie moderne, il offre des conseils perspicaces et des stratégies pratiques pour aider les individus à surmonter les obstacles, à développer un état d'esprit positif et à établir des relations significatives et épanouissantes",
+            robots: 'index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1',
+            title: 'Prendre Rendez-Vous',
+            image: asset('/web/images/favicon1.png'),
+            canonical_url: route('lead_form'),
+            openGraphTitle: 'Mohamed BenMoussa Consulting',
+            author: 'BenMoussaConsulting',
+            locale: 'fr'
+
+        );
+
+        return view('v1.leads_form.form', compact('seoData'));
     }
 
     public function PostLeadForm()
@@ -52,12 +66,24 @@ class ClientsController extends Controller
     public function showConfirmation(Request $request)
     {
 
+        $seoData = new SEOData(
+            description: "Mohamed BenMoussa est bien plus qu'un coach ordinaire. Avec des années d'expérience et une compréhension profonde des complexités de la vie moderne, il offre des conseils perspicaces et des stratégies pratiques pour aider les individus à surmonter les obstacles, à développer un état d'esprit positif et à établir des relations significatives et épanouissantes",
+            robots: 'index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1',
+            title: 'Confirmation du rendez-vous',
+            image: asset('/web/images/favicon1.png'),
+            canonical_url: route('confirmation.message'),
+            openGraphTitle: 'Mohamed BenMoussa Consulting',
+            author: 'BenMoussaConsulting',
+            locale: 'fr'
+
+        );
+
         $client = Client::where('id', dcryptID($request->client))->first();
 
         if (!$client) {
             return redirect()->route('web.home');
         }
 
-        return view('v1.leads_form.success_page', compact('client'));
+        return view('v1.leads_form.success_page', compact('client', 'seoData'));
     }
 }

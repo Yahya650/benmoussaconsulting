@@ -30,8 +30,8 @@ Route::namespace('web')->name('web.')->group(function () {
 Route::view('/test', 'welcome');
 
 Route::post('/send-message', [MessageController::class, 'sendMessage'])->name('send.message');
-Route::get('/take-appointment', [ClientsController::class, 'getLeadForm'])->name('lead_form');
-Route::post('/post-appointment', [ClientsController::class, 'postLeadForm'])->name('leads.store');
+Route::get('/prendre-rendez-vous', [ClientsController::class, 'getLeadForm'])->name('lead_form');
+Route::post('/save-appointement', [ClientsController::class, 'postLeadForm'])->name('leads.store');
 Route::get('/confirmation-message', [ClientsController::class, 'showConfirmation'])->name('confirmation.message');
 
 // Route::prefix('auth')->group(function () {
