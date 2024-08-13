@@ -3,7 +3,7 @@
 @section('seo')
     {!! seo($seoData) !!}
     <meta name="keywords"
-        content="Mohamed BenMoussa, formateur international et coach certifié, spécialisé en comportements relationnels et développement humain, vous aide à améliorer vos relations, y compris les relations intimes et l'éducation sexuelle. Grâce à son expertise en coaching personnalisé, il propose des stratégies pratiques et des conseils pour atteindre une vie épanouissante, équilibrée, et développer un état d'esprit positif. Ses services incluent des cours de développement personnel et des sessions de coaching, accessibles via les ondes radio, pour ceux qui cherchent à établir des relations significatives et enrichissantes">
+        content="Mohamed BenMoussa, Formateur international, Coach certifié, Comportements relationnels, Développement humain, Améliorer les relations, Éducation sexuelle, Coaching en relations, Conseils relationnels, Stratégies pratiques, Vie épanouissante, Développement personnel, État d'esprit positif,Relations intimes, Vie équilibrée, Coaching personnalisé, Cours de développement personnel, Radio coaching, Épanouissement personnel, Relations significatives">
     <meta property="og:description"
         content="Mohamed BenMoussa est bien plus qu'un coach ordinaire. Avec des années d'expérience et une compréhension profonde des complexités de la vie moderne, il offre des conseils perspicaces et des stratégies pratiques pour aider les individus à surmonter les obstacles, à développer un état d'esprit positif et à établir des relations significatives et épanouissantes.">
 
