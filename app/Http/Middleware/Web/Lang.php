@@ -1,12 +1,11 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace App\Http\Middleware\Web;
 
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Config;
-
 class Lang
 {
     /**
@@ -18,7 +17,6 @@ class Lang
      */
     public function handle(Request $request, Closure $next)
     {
-        // Retrieve the language from the session or fallback to the default language
         $lang = session()->get('lang', Config::get('app.fallback_locale'));
 
         // Check if the language is available in the app's configured languages
