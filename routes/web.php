@@ -20,27 +20,32 @@ use App\Http\Controllers\v1\web\HomeController as WebHomeController;
 |
 */
 
-Route::namespace('web')->name('web.')->group(function () {
-    Route::get('/', [WebHomeController::class, 'index'])->name('home');
-    Route::get('/contact', [WebHomeController::class, 'contact'])->name('contact');
-    Route::get('/les-differents-types-de-coaching', [WebHomeController::class, 'coachingTypes'])->name('coaching.types');
+
+Route::middleware(['Lang'])->group(function () {
+
+    Route::namespace('web')->name('web.')->group(function () {
+        Route::get('/', [WebHomeController::class, 'index'])->name('home');
+        Route::get('/contact', [WebHomeController::class, 'contact'])->name('contact');
+        Route::get('/les-differents-types-de-coaching', [WebHomeController::class, 'coachingTypes'])->name('coaching.types');
+    });
+
+
+    Route::view('/test', 'welcome');
+
+    Route::post('/send-message', [MessageController::class, 'sendMessage'])->name('send.message');
+    Route::get('/prendre-rendez-vous', [ClientsController::class, 'getLeadForm'])->name('lead_form');
+    Route::post('/save-appointement', [ClientsController::class, 'postLeadForm'])->name('leads.store');
+    Route::get('/confirmation-message', [ClientsController::class, 'showConfirmation'])->name('confirmation.message');
+
+    // Route::prefix('auth')->group(function () {
+    //     Route::get('/signin', [AuthController::class, 'getLogin'])->name('auth.signin');
+    //     Route::post('signin', [AuthController::class, 'postSignin'])->name('auth.signin.post');
+    // });
+
+    // Route::middleware(['auth'])->group(function () {
+    //     Route::prefix('admin')->name('admin.')->group(function () {
+    //         Route::get('/', [HomeController::class, 'index'])->name('home');
+    //     });
+    // });
+
 });
-
-
-Route::view('/test', 'welcome');
-
-Route::post('/send-message', [MessageController::class, 'sendMessage'])->name('send.message');
-Route::get('/prendre-rendez-vous', [ClientsController::class, 'getLeadForm'])->name('lead_form');
-Route::post('/save-appointement', [ClientsController::class, 'postLeadForm'])->name('leads.store');
-Route::get('/confirmation-message', [ClientsController::class, 'showConfirmation'])->name('confirmation.message');
-
-// Route::prefix('auth')->group(function () {
-//     Route::get('/signin', [AuthController::class, 'getLogin'])->name('auth.signin');
-//     Route::post('signin', [AuthController::class, 'postSignin'])->name('auth.signin.post');
-// });
-
-// Route::middleware(['auth'])->group(function () {
-//     Route::prefix('admin')->name('admin.')->group(function () {
-//         Route::get('/', [HomeController::class, 'index'])->name('home');
-//     });
-// });

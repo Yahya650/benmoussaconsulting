@@ -2,11 +2,33 @@
 
 namespace App\Http\Controllers\v1\web;
 
+use Illuminate\Support\Facades\App;
 use App\Http\Controllers\Controller;
 use RalphJSmit\Laravel\SEO\Support\SEOData;
+use Illuminate\Support\Facades\Config;
 
 class HomeController extends Controller
 {
+
+    public function redirect()
+    {
+
+        dd(session()->get('lang'));
+
+        $lang = session()->get('lang');
+
+        if (in_array($lang, Config::get('app.languages_available'))) {
+            App::setLocale($lang);
+            session()->put('lang', $lang);
+        } else {
+            $lang = Config::get('app.fallback_locale');
+            App::setLocale($lang);
+            session()->put('lang', $lang);
+        }
+
+        return redirect()->route('web.home');
+    }
+
     public function index()
     {
 
@@ -22,8 +44,7 @@ class HomeController extends Controller
 
         );
 
-        return view('v1.web.index', compact('seoData'));
-        // return "500";
+        return view('v2.web.index', compact('seoData'));
     }
 
     public function contact()
@@ -40,7 +61,7 @@ class HomeController extends Controller
             locale: 'fr'
         );
 
-        return view('v1.web.pages.contact', compact('seoData'));
+        return view('v2.web.pages.contact', compact('seoData'));
         // return "500";
     }
 
@@ -58,7 +79,7 @@ class HomeController extends Controller
             locale: 'fr'
         );
 
-        return view('v1.web.pages.coaching-types', compact('seoData'));
+        return view('v2.web.pages.coaching-types', compact('seoData'));
         // return "500";
     }
 }

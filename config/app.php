@@ -82,7 +82,9 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'fr',
+
+    'languages_available' => ['fr', 'ar'], // Add your supported languages here
 
     /*
     |--------------------------------------------------------------------------
@@ -95,7 +97,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'fr',
 
     /*
     |--------------------------------------------------------------------------
