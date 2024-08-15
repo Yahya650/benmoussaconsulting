@@ -28,7 +28,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.tiktok.com/@mrbenmoussamohamed/" target="_blank">
+                            <a href="https://www.tiktok.com/@mrbenmoussamohamed" target="_blank">
                                 <i class="fa-brands fa-tiktok"></i>
                             </a>
                         </li>
