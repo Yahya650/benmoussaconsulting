@@ -18,27 +18,27 @@
                     <!-- Social Box -->
                     <ul class="social-box">
                         <li>
-                            <a href="https://web.facebook.com/coachbenmoussa/">
+                            <a href="https://web.facebook.com/coachbenmoussa/" target="_blank">
                                 <i class="fa-brands fa-facebook"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="tel:+212520816447">
+                            <a href="tel:+212520816447" target="_blank">
                                 <i class="fa-solid fa-phone-volume"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.tiktok.com/@mrbenmoussamohamed/">
+                            <a href="https://www.tiktok.com/@mrbenmoussamohamed/" target="_blank">
                                 <i class="fa-brands fa-tiktok"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="https://wa.me/212665228542">
+                            <a href="https://wa.me/212665228542" target="_blank">
                                 <i class="fa-brands fa-whatsapp"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.instagram.com/mrbenmoussamohamed/">
+                            <a href="https://www.instagram.com/mrbenmoussamohamed/" target="_blank">
                                 <i class="fa-brands fa-instagram"></i>
                             </a>
                         </li>
