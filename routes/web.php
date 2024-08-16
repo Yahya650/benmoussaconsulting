@@ -21,7 +21,9 @@ use App\Http\Controllers\v1\web\HomeController as WebHomeController;
 */
 
 
-Route::middleware(['Lang'])->group(function () {
+
+
+Route::middleware(['lang'])->group(function () {
 
     Route::namespace('web')->name('web.')->group(function () {
         Route::get('/', [WebHomeController::class, 'index'])->name('home');
@@ -47,5 +49,4 @@ Route::middleware(['Lang'])->group(function () {
     //         Route::get('/', [HomeController::class, 'index'])->name('home');
     //     });
     // });
-
 });
