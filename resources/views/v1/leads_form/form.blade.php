@@ -18,7 +18,12 @@
         <!-- Star Animation Start Here -->
         <canvas id="canvas"></canvas>
         <!-- Star Animation End Here -->
-        <div class="fxt-content rounded">
+        <div class="fxt-content rounded position-relative">
+            <div class="position-absolute top-0 start-0 mt-3 ms-3">
+                <a href="{{ route('web.home') }}"><i class="fa-solid fa-arrow-left fa-beat-fade fa-2xl"
+                        style="color: #000000;"></i></a>
+            </div>
+
             <div class="fxt-header">
                 <a href="login-30.html" class="fxt-logo"><img src="/assets/leads_form/img/output-onlinegiftools.gif"
                         alt="Logo"></a>

@@ -1,4 +1,4 @@
-@extends('v1.web.layouts.default')
+@extends('v2.web.layouts.default')
 
 
 @section('seo')
@@ -13,140 +13,120 @@
 @section('title', 'Contactez-nous')
 @section('content')
 
-    <!-- Page Title Section -->
-    <section class="page-title" style="background-image: url(/web/images/main-slider/image-1.png)">
-        <div class="auto-container">
-            <div class="content">
-                <div class="text">Prenez contact avec :</div>
-                <h1>Mohamed BenMoussa</h1>
-            </div>
-            <div class="breadcrumb-outer">
-                <ul class="page-breadcrumb">
-                    <li><a href="{{ route('web.home') }}">Accueil</a></li>
-                    <li>Contact</li>
-                </ul>
+    <section class="position-relative">
+        <div id="particles-js"><canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="1898"
+                height="315"></canvas></div>
+        <div class="container">
+            <div class="row text-center">
+                <div class="col">
+                    <h1>@lang('contact.section_1.title')</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center bg-transparent p-0 m-0">
+                            <li class="breadcrumb-item"><a class="text-dark"
+                                    href="{{ route('web.home') }}">@lang('contact.section_1.breadcrumbs.home')</a></li>
+                            {{-- <li class="breadcrumb-item">@lang('contact.section_1.breadcrumbs.pages')</li> --}}
+                            {{-- <li class="breadcrumb-item">@lang('contact.section_1.breadcrumbs.contacts')</li> --}}
+                            <li class="breadcrumb-item active text-primary" aria-current="page">@lang('contact.section_1.breadcrumbs.contact_us')</li>
+                        </ol>
+                    </nav>
+                </div>
             </div>
         </div>
     </section>
-    <!-- End Page Title Section -->
 
-    <!-- Map Section -->
-    <section class="contact-map-section">
-        <div class="auto-container">
-            <div class="clearfix">
-                <div class="map-box">
-                    <h4>Informations sur l'emplacement</h4>
-                    <ul class="contact-list">
-                        <li>
-                            <span class="icon flaticon-telephone"></span>
-                            13 Rue Aomr EL KHAYAM Rés Yasmine B ETG 3 Num 13,<br>
-                            {{-- <a href="#" class="direction">Obtenir l'itinéraire</a> --}}
-                        </li>
-                        <li>
-                            <span class="icon flaticon-email-1"></span>
+    <div class="page-content">
+        <section>
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-lg-4 col-md-12">
+                        <div>
+                            <h4 class="mt-5">@lang('contact.section_2.address.title')</h4>
+                            <span class="text-dark">@lang('contact.section_2.address.details')</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div>
+                            <h4 class="mt-5">@lang('contact.section_2.email.title')</h4>
                             <a href="mailto:contact@benmoussaconsulting.com">contact@benmoussaconsulting.com</a>
-                        </li>
-                        <li>
-                            <span class="icon flaticon-clock"></span>
-                            <b>Lundi</b> : 14:00 - 19:30
-                            <br>
-                            <b>Mardi-Vendredi</b> : 09:30 - 19:30
-                            <br>
-                            <b>Samedi</b> : 9:30 - 13:30
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="outer-container">
-            <!-- Map Boxed -->
-            <div class="map-boxed">
-                <!--Map Outer-->
-                <div class="map-outer">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13298.048282612528!2d-7.6432226!3d33.5660515!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d3b53e753bbd%3A0x88efca26303ba445!2sCabinet%20de%20Coaching%20BenMoussa!5e0!3m2!1sen!2sma!4v1697561681669!5m2!1sen!2sma"
-                        style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Map Section -->
-
-    <!-- Contact Form Section -->
-    <section class="contact-form-section">
-        <div class="auto-container">
-            <div class="row clearfix">
-
-                <!-- Image Column -->
-                <div class="image-column col-lg-6 col-md-12 col-sm-12">
-                    <div class="inner-column">
-                        <div class="image">
-                            <img src="/web/images/coach-chada-3.jpg" alt="" width="260px" />
                         </div>
-                        <div class="image-two">
-                            <img src="/web/images/DSC06838 cropped.JPG" alt="" width="400px" />
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div>
+                            <h4 class="mt-5">@lang('contact.section_2.phone.title')</h4>
+                            <a href="tel:+912345678900">0520-816447</a>
+                            /
+                            <a href="tel:+912345678900">0665-228542</a>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Form Column -->
-                <div class="form-column col-lg-6 col-md-12 col-sm-12">
-                    <div class="inner-column">
-                        <div class="sec-title">
-                            <div class="title color-three">Contactez-nous</div>
-                            <h2>Faites une demande personnalisée</h2>
+        <section>
+            <div class="container">
+                <div class="row justify-content-center mb-5 text-center">
+                    <div class="col-12 col-lg-8">
+                        <div>
+                            <h2 class="mt-4 mb-0">@lang('contact.section_3.title')</h2>
+                            <p class="lead mb-0">@lang('contact.section_3.subtitle')</p>
                         </div>
-
-                        <!-- Contact Form -->
-                        <div class="contact-form">
-                            <form id="clientForm">
-                                <div class="row clearfix">
-
-                                    <!-- Form Group -->
-                                    <div class="form-group col-lg-6 col-md-6 col-sm-12">
-                                        <span class="icon flaticon-user-4"></span>
-                                        <input type="text" name="full_name" placeholder="Nom & Prénom" required>
-                                    </div>
-
-                                    <!-- Form Group -->
-                                    <div class="form-group col-lg-6 col-md-6 col-sm-12">
-                                        <span class="icon flaticon-envelope"></span>
-                                        <input type="email" name="email" placeholder="Adresse E-Mail" required>
-                                    </div>
-
-                                    <!--Form Group-->
-                                    <div class="form-group col-lg-12 col-md-12 col-sm-12">
-                                        <span class="icon flaticon-notebook"></span>
-                                        <input type="text" name="subject" placeholder="Sujet" required>
-
-                                    </div>
-
-                                    <!-- Form Group -->
-                                    <div class="form-group col-lg-12 col-md-12 col-sm-12">
-                                        <span class="icon flaticon-pen"></span>
-                                        <textarea name="text" placeholder="Message" id="text" required></textarea>
-                                    </div>
-
-                                    <!-- Form Group -->
-                                    <div class="form-group col-lg-12 col-md-12 col-sm-12">
-                                        <button class="btn-style-three" type="submit" id="submit"><span
-                                                class="txt">Envoyer</span></button>
-                                    </div>
-
-                                </div>
-                            </form>
-
-                        </div>
-                        <!-- End Contact Form -->
-
                     </div>
                 </div>
-
+                <div class="row justify-content-center text-center">
+                    <div class="col-12 col-lg-10">
+                        <form id="contact-form" class="row" method="post" action="php/contact.php" novalidate="true">
+                            <div class="messages"></div>
+                            <div class="form-group col-md-6">
+                                <input id="form_name" type="text" name="name" class="form-control"
+                                    placeholder="@lang('contact.section_4.form.first_name_placeholder')" required="required" data-error="@lang('contact.section_4.form.first_name_error')">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input id="form_name1" type="text" name="name" class="form-control"
+                                    placeholder="@lang('contact.section_4.form.last_name_placeholder')" required="required" data-error="@lang('contact.section_4.form.last_name_error')">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <input id="form_email" type="email" name="email" class="form-control"
+                                    placeholder="@lang('contact.section_4.form.email_placeholder')" required="required" data-error="@lang('contact.section_4.form.email_error')">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <input id="form_phone" type="tel" name="phone" class="form-control"
+                                    placeholder="@lang('contact.section_4.form.phone_placeholder')" required="required" data-error="@lang('contact.section_4.form.phone_error')">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <select class="form-select form-control">
+                                    <option>@lang('contact.section_4.form.select_service')</option>
+                                    <option>@lang('contact.section_4.form.service_1')</option>
+                                    <option>@lang('contact.section_4.form.service_2')</option>
+                                    <option>@lang('contact.section_4.form.service_3')</option>
+                                    <option>@lang('contact.section_4.form.service_4')</option>
+                                    <option>@lang('contact.section_4.form.service_5')</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input id="form_subject" type="text" name="subject" class="form-control"
+                                    placeholder="@lang('contact.section_4.form.subject_placeholder')" required="required" data-error="@lang('contact.section_4.form.subject_error')">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <textarea id="form_message" name="message" class="form-control" placeholder="@lang('contact.section_4.form.message_placeholder')" rows="10"
+                                    required="required" data-error="@lang('contact.section_4.form.message_error')"></textarea>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="col-md-12 text-center mt-4">
+                                <button class="btn btn-primary"><span>@lang('contact.section_4.form.submit_button')</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
-    <!-- End Contact Form Section -->
+        </section>
+    </div>
+
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

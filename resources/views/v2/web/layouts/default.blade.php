@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ app()->getLocale() }}" @if (app()->getLocale() == 'ar') dir="rtl" class="rtl" @endif>
 
 <!-- Mirrored from themeht.com/template/bootsland/html/index-4.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Aug 2024 09:45:34 GMT -->
 
@@ -13,7 +13,8 @@
     <title>MohamedBenMoussa - @yield('title')</title>
 
     <!-- Favicon Icon -->
-    <link rel="shortcut icon" href="/assets/v2/images/favicon.ico" />
+    <link rel="shortcut icon" href="/web/images/favicon1.png" type="image/x-icon">
+    <link rel="icon" href="/web/images/favicon1.png" type="image/x-icon">
 
     <!-- inject css start -->
 
@@ -28,6 +29,9 @@
 
     <!--== themify-icons -->
     <link href="/assets/v2/css/themify-icons.css" rel="stylesheet" type="text/css" />
+
+    <!--== font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!--== magnific-popup -->
     <link href="/assets/v2/css/magnific-popup.css" rel="stylesheet" type="text/css" />
@@ -47,6 +51,15 @@
     <!-- inject css end -->
 
 
+    <style>
+        /* General styles for RTL (Arabic) */
+        .rtl {
+            direction: rtl;
+            text-align: right;
+        }
+    </style>
+
+    @yield('css')
     @yield('seo')
 
 </head>

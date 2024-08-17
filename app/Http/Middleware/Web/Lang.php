@@ -6,6 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Config;
+
 class Lang
 {
     /**
@@ -17,19 +18,21 @@ class Lang
      */
     public function handle(Request $request, Closure $next)
     {
+        // Get the current language from the session or use the fallback locale
         $lang = session()->get('lang', Config::get('app.fallback_locale'));
 
-        // Check if the language is available in the app's configured languages
+        // Ensure the selected language is one of the available languages
         if (!in_array($lang, Config::get('app.languages_available'))) {
             $lang = Config::get('app.fallback_locale');
         }
 
-        // Set the application locale
+        // Set the application locale to the selected language
         App::setLocale($lang);
 
         // Update the session with the current language
         session()->put('lang', $lang);
 
+        // Proceed with the request
         return $next($request);
     }
 }

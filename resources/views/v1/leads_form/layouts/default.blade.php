@@ -10,7 +10,7 @@
     <link rel="icon" href="/web/images/favicon1.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/assets/leads_form/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/leads_form/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/assets/leads_form/font/flaticon.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/leads_form/css/style.css?v=0.0.1">

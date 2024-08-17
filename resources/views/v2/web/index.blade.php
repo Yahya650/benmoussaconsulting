@@ -16,23 +16,24 @@
     <section class="custom-pt-1 custom-pb-2 bg-primary parallaxie position-relative"
         style="background-image: url(/assets/v2/images/bg/01.jpg);background-position: center center; background-size: auto; background-repeat: no-repeat;"
         data-overlay="6">
-        <div class="container">
+        <div class="container" @if (app()->getLocale() == 'ar') @class(['mt-3']) @endif>
             <div class="row justify-content-center text-center">
                 <div class="col-12 col-lg-10 col-xl-8">
                     <!-- Heading -->
                     <h1 class="display-4 text-white fw-bold">
-                        Change the way you build websites With Bootsland
+                        @lang('home.hero.title')
                     </h1>
                     <!-- Text -->
-                    <p class="lead text-light">Build a Beautiful, Clean & Modern Design website with flexible
-                        Bootstrap
-                        components.</p>
-                    <!-- Buttons --> <a href="#" class="btn btn-primary me-1">
-                        Learn More
+                    <p class="lead text-light">
+                        @lang('home.hero.subtitle')
+                    </p>
+                    <!-- Buttons -->
+                    <a href="{{ route('lead_form') }}" class="btn btn-primary me-1">
+                        @lang('home.hero.button')
                     </a>
-                    <a href="#" class="btn btn-light">
+                    {{-- <a href="#" class="btn btn-light">
                         Get Started
-                    </a>
+                    </a> --}}
                 </div>
             </div>
             <!-- / .row -->
@@ -55,180 +56,178 @@
 
     <div class="page-content">
 
-        <!--services start-->
 
         <section>
             <div class="container">
                 <div class="row justify-content-center text-center">
                     <div class="col-12 col-md-12 col-lg-8 mb-8 mb-lg-0">
                         <div class="mb-8"> <span class="badge badge-primary-soft p-2 font-w-6">
-                                What We Offerd
+                                @lang('home.section_1.title')
                             </span>
-                            <h2 class="mt-3 font-w-5">Creative Design And Creative Services</h2>
-                            <p class="lead mb-0">All types of businesses need access to development resources, so
+                            <h2 class="mt-3 font-w-5">@lang('home.section_1.subtitle')</h2>
+                            {{-- <p class="lead mb-0">All types of businesses need access to development resources, so
                                 we give you the
-                                option to decide how much you need to use.</p>
+                                option to decide how much you need to use.</p> --}}
                         </div>
                     </div>
                 </div>
                 <!-- / .row -->
                 <div class="row align-items-center">
-                    <div class="col-xl-4 col-lg-4 mb-8 mb-lg-0">
-                        <div class="px-4 py-7 rounded hover-translate text-center">
-                            <div>
-                                <img class="img-fluid" src="/assets/v2/images/svg/01.svg" alt="">
-                            </div>
-                            <h5 class="mt-4 mb-3">Creative UI/UX</h5>
-                            <p>Serspiciatis unde omnis iste natus error sit doloremque laudantium, totam rem
-                                aperiam.</p>
-                            <a class="btn-link" href="#">Read Details</a>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-sm-6">
+                    <div class="col-xl-3 col-lg-3 mb-8 mb-lg-0">
                         <div class="px-4 py-7 rounded hover-translate text-center bg-white shadow">
-                            <div>
-                                <img class="img-fluid" src="/assets/v2/images/svg/02.svg" alt="">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="/web/images/benmoussa-radio.jpg" alt="">
+                                <div class="video-btn video-btn-pos"> <a class="play-btn popup-youtube"
+                                        href="https://www.youtube.com/watch?v=H9QqaVrSDK0"><i class="fa-brands fa-youtube"
+                                            style="color: #ff0000;"></i></a>
+                                    <div class="spinner-eff">
+                                        <div class="spinner-circle circle-1"></div>
+                                        <div class="spinner-circle circle-2"></div>
+                                    </div>
+                                </div>
                             </div>
-                            <h5 class="mt-4 mb-3">Flexibility</h5>
-                            <p>Serspiciatis unde omnis iste natus error sit doloremque laudantium, totam rem
-                                aperiam.</p>
-                            <a class="btn-link" href="#">Read Details</a>
+                            <h5 class="mt-4 mb-3">@lang('home.section_1.cards.card_1.title')</h5>
+                            {{-- <p>Serspiciatis unde omnis iste natus error sit doloremque laudantium, totam rem
+                                aperiam.</p> --}}
+                            <a class="btn-link link-underline link-underline-opacity-0" href="https://www.youtube.com/watch?v=H9QqaVrSDK0"
+                                target="_blank">@lang('home.section_1.cards.card_1.button')</a>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-sm-6 mt-6 mt-sm-0">
-                        <div class="px-4 py-7 rounded hover-translate text-center">
-                            <div>
-                                <img class="img-fluid" src="/assets/v2/images/svg/03.svg" alt="">
+                    <div class="col-xl-3 col-lg-3 col-sm-6">
+                        <div class="px-4 py-7 rounded hover-translate text-center bg-white shadow">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="/web/images/coach-chada-3.jpg" alt="">
+                                <div class="video-btn video-btn-pos"> <a class="play-btn popup-youtube"
+                                        href="https://www.youtube.com/watch?v=iwcf3gv_Zc4"><i class="fa-brands fa-youtube"
+                                            style="color: #ff0000;"></i></a>
+                                    <div class="spinner-eff">
+                                        <div class="spinner-circle circle-1"></div>
+                                        <div class="spinner-circle circle-2"></div>
+                                    </div>
+                                </div>
                             </div>
-                            <h5 class="mt-4 mb-3">Easy Code</h5>
-                            <p>Serspiciatis unde omnis iste natus error sit doloremque laudantium, totam rem
-                                aperiam.</p>
-                            <a class="btn-link" href="#">Read Details</a>
+                            <h5 class="mt-4 mb-3">@lang('home.section_1.cards.card_2.title')</h5>
+                            {{-- <p>Serspiciatis unde omnis iste natus error sit doloremque laudantium, totam rem
+                                aperiam.</p> --}}
+                            <a class="btn-link link-underline link-underline-opacity-0" href="https://www.youtube.com/watch?v=iwcf3gv_Zc4"
+                                target="_blank">@lang('home.section_1.cards.card_2.button')</a>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-sm-6 mt-6 mt-sm-0">
+                        <div class="px-4 py-7 rounded hover-translate text-center bg-white shadow">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="/web/images/coach-chada-1.png" alt="">
+                                <div class="video-btn video-btn-pos"> <a class="play-btn popup-youtube"
+                                        href="https://www.youtube.com/watch?v=0pKUSbq3SS0"><i class="fa-brands fa-youtube"
+                                            style="color: #ff0000;"></i></a>
+                                    <div class="spinner-eff">
+                                        <div class="spinner-circle circle-1"></div>
+                                        <div class="spinner-circle circle-2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h5 class="mt-4 mb-3">@lang('home.section_1.cards.card_3.title')</h5>
+                            {{-- <p>Serspiciatis unde omnis iste natus error sit doloremque laudantium, totam rem
+                                aperiam.</p> --}}
+                            <a class="btn-link link-underline link-underline-opacity-0" href="https://www.youtube.com/watch?v=0pKUSbq3SS0"
+                                target="_blank">@lang('home.section_1.cards.card_3.button')</a>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-sm-6 mt-6 mt-sm-0">
+                        <div class="px-4 py-7 rounded hover-translate text-center bg-white shadow">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="/web/images/coach-chada-6.jpg" alt="">
+                                <div class="video-btn video-btn-pos"> <a class="play-btn popup-youtube"
+                                        href="https://www.youtube.com/watch?v=ACmDMOg-iK4">
+                                        <i class="fa-brands fa-youtube" style="color: #ff0000;"></i>
+                                    </a>
+                                    <div class="spinner-eff">
+                                        <div class="spinner-circle circle-1"></div>
+                                        <div class="spinner-circle circle-2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h5 class="mt-4 mb-3">@lang('home.section_1.cards.card_4.title')</h5>
+                            {{-- <p>Serspiciatis unde omnis iste natus error sit doloremque laudantium, totam rem
+                                aperiam.</p> --}}
+                            <a class="btn-link link-underline link-underline-opacity-0" href="https://www.youtube.com/watch?v=ACmDMOg-iK4"
+                                target="_blank">@lang('home.section_1.cards.card_4.button')</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!--services end-->
 
-
-        <!--about start-->
-
-        <section>
+        <section class="custom-pt-1 custom-pb-2 bg-dark position-relative" data-bg-img="/assets/v2/images/bg/02.png"
+            style="background-image: url(&quot;assets/images/bg/02.png&quot;);">
             <div class="container">
-                <div class="row align-items-center justify-content-between">
-                    <div class="col-12 col-lg-6 mb-8 mb-lg-0">
-                        <img src="/assets/v2/images/about/05.png" alt="Image" class="img-fluid">
-                    </div>
-                    <div class="col-12 col-lg-6 col-xl-5">
-                        <div> <span class="badge badge-primary-soft p-2 font-w-6">
-                                About Bootsland
+                <div class="row align-items-end">
+                    <div class="col-lg-4 col-md-6 mb-8 mb-lg-0 text-white">
+                        <div> <span class="badge badge-primary-soft p-2">
+                                <i class="la la-cubes ic-3x rotation"></i>
                             </span>
-                            <h2 class="mt-3 font-w-5">Bootsland Crafting Creative And Beautiful Experience</h2>
-                            <p class="lead mb-0">We use the latest technologies it voluptatem accusantium
-                                doloremque laudantium,
-                                totam rem aperiam.</p>
+                            <h2 class="mt-3 mb-0">@lang('home.section_2.title')</h2>
                         </div>
-                        <div class="d-flex align-items-center justify-content-between mt-5">
-                            <div class="counter">
-                                <div class="counter-desc"> <span class="count-number display-4" data-to="15"
-                                        data-speed="1000">15</span>
-                                    <span class="display-4 text-primary">k</span>
-                                    <h6 class="text-muted mb-0">Project</h6>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="bg-primary-soft rounded p-5">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="me-3">
+                                    <img class="img-fluid" src="/assets/v2/images/icon/01.svg" alt="">
                                 </div>
+                                <h5 class="m-0 text-light">@lang('home.section_2.services.service_1.title')</h5>
                             </div>
-                            <div class="counter">
-                                <div class="counter-desc"> <span class="count-number display-4" data-to="29"
-                                        data-speed="1000">29</span>
-                                    <span class="display-4 text-primary">k</span>
-                                    <h6 class="text-muted mb-0">Member</h6>
+                            <p class="mb-0">@lang('home.section_2.services.service_1.description')</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mt-6 mt-md-0">
+                        <div class="bg-primary-soft rounded p-5">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="me-3">
+                                    <img class="img-fluid" src="/assets/v2/images/icon/02.svg" alt="">
                                 </div>
+                                <h5 class="m-0 text-light">@lang('home.section_2.services.service_2.title')</h5>
                             </div>
-                            <div class="counter">
-                                <div class="counter-desc"> <span class="count-number display-4" data-to="23"
-                                        data-speed="1000">23</span>
-                                    <span class="display-4 text-primary">k</span>
-                                    <h6 class="text-muted mb-0">Happy Client</h6>
+                            <p class="mb-0">@lang('home.section_2.services.service_2.description')</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mt-6">
+                        <div class="bg-primary-soft rounded p-5">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="me-3">
+                                    <img class="img-fluid" src="/assets/v2/images/icon/03.svg" alt="">
                                 </div>
+                                <h5 class="m-0 text-light">@lang('home.section_2.services.service_3.title')</h5>
                             </div>
+                            <p class="mb-0">@lang('home.section_2.services.service_3.description')</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mt-6">
+                        <div class="bg-primary-soft rounded p-5">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="me-3">
+                                    <img class="img-fluid" src="/assets/v2/images/icon/04.svg" alt="">
+                                </div>
+                                <h5 class="m-0 text-light">@lang('home.section_2.services.service_4.title')</h5>
+                            </div>
+                            <p class="mb-0">@lang('home.section_2.services.service_4.description')</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mt-6">
+                        <div class="bg-primary-soft rounded p-5">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="me-3">
+                                    <img class="img-fluid" src="/assets/v2/images/icon/05.svg" alt="">
+                                </div>
+                                <h5 class="m-0 text-light">@lang('home.section_2.services.service_5.title')</h5>
+                            </div>
+                            <p class="mb-0">@lang('home.section_2.services.service_5.description')</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!--about end-->
-
-
-        <!--how it work start-->
-
-        <section class="custom-py-2 position-relative bg-dark" data-bg-img="/assets/v2/images/bg/02.png">
-            <div class="container">
-                <div class="row justify-content-center text-center">
-                    <div class="col-12 col-md-12 col-lg-8 mb-8 mb-lg-0">
-                        <div class="mb-8"> <span class="badge badge-primary-soft p-2 font-w-6">
-                                How It Work
-                            </span>
-                            <h2 class="mt-3 font-w-5 mb-0 text-white">Three Simple Step To Started Working Process
-                            </h2>
-                        </div>
-                    </div>
-                </div>
-                <!-- / .row -->
-                <div class="row align-items-center justify-content-between mb-10">
-                    <div class="col-12 col-lg-6 mb-6 mb-lg-0">
-                        <img src="/assets/v2/images/svg/04.svg" alt="Image" class="img-fluid">
-                    </div>
-                    <div class="col-12 col-lg-6 col-xl-5">
-                        <div>
-                            <h2> <span class="badge badge-primary-soft p-2">
-                                    01
-                                </span>
-                            </h2>
-                            <h4 class="mt-3 text-light">Choose Project</h4>
-                            <p class="lead mb-0">We use the latest technologies it voluptatem accusantium
-                                doloremque laudantium,
-                                totam rem aperiam.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row align-items-center justify-content-between mb-10">
-                    <div class="col-12 col-lg-6 order-lg-1 mb-6 mb-lg-0">
-                        <img src="/assets/v2/images/svg/05.svg" alt="Image" class="img-fluid">
-                    </div>
-                    <div class="col-12 col-lg-6 col-xl-5">
-                        <div>
-                            <h2> <span class="badge badge-primary-soft p-2">
-                                    02
-                                </span>
-                            </h2>
-                            <h4 class="mt-3 text-light">Start Creating</h4>
-                            <p class="lead mb-0">We use the latest technologies it voluptatem accusantium
-                                doloremque laudantium,
-                                totam rem aperiam.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row align-items-center justify-content-between">
-                    <div class="col-12 col-lg-6 mb-6 mb-lg-0">
-                        <img src="/assets/v2/images/svg/06.svg" alt="Image" class="img-fluid">
-                    </div>
-                    <div class="col-12 col-lg-6 col-xl-5">
-                        <div>
-                            <h2> <span class="badge badge-primary-soft p-2">
-                                    03
-                                </span>
-                            </h2>
-                            <h4 class="mt-3 text-light">Get Result</h4>
-                            <p class="lead mb-0">We use the latest technologies it voluptatem accusantium
-                                doloremque laudantium,
-                                totam rem aperiam.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="shape-1" style="height: 200px; overflow: hidden;">
+            <div class="shape-1" style="height: 150px; overflow: hidden;">
                 <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
                     <path d="M0.00,49.98 C150.00,150.00 271.49,-50.00 500.00,49.98 L500.00,0.00 L0.00,0.00 Z"
                         style="stroke: none; fill: #fff;"></path>
@@ -242,124 +241,42 @@
             </div>
         </section>
 
-        <!--how it work end-->
 
-
-        <!--team start-->
 
         <section class="pt-0">
             <div class="container">
-                <div class="row justify-content-center text-center">
-                    <div class="col-12 col-md-12 col-lg-8 mb-8 mb-lg-0">
-                        <div class="mb-8"> <span class="badge badge-primary-soft p-2 font-w-6">
-                                Bootsland Team
-                            </span>
-                            <h2 class="mt-3 font-w-5">Meet Our Team Of Expert</h2>
-                            <p class="lead mb-0">All types of businesses need access to development resources, so
-                                we give you the
-                                option to decide how much you need to use.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- / .row -->
-                <div class="row">
-                    <div class="col-12 col-lg-3 col-md-6 mb-8 mb-lg-0">
-                        <div class="text-center hover-translate p-5">
-                            <div class="mb-3">
-                                <img class="img-fluid rounded-top" src="/assets/v2/images/team/01.png" alt="">
-                            </div>
-                            <div>
-                                <h6 class="mb-1">Vinit Saw</h6>
-                                <small class="text-muted mb-3 d-block">Manager</small>
-                                <ul class="list-inline mb-0">
-                                    <li class="list-inline-item"><a class="text-muted" href="#"><i
-                                                class="la la-facebook h4"></i></a>
-                                    </li>
-                                    <li class="list-inline-item"><a class="text-muted h6" href="#"><i
-                                                class="la la-dribbble h4"></i></a>
-                                    </li>
-                                    <li class="list-inline-item"><a class="text-muted h6" href="#"><i
-                                                class="la la-twitter h4"></i></a>
-                                    </li>
-                                    <li class="list-inline-item"><a class="text-muted h6" href="#"><i
-                                                class="la la-linkedin h4"></i></a>
-                                    </li>
-                                </ul>
+                <div class="row text-center align-items-center justify-content-between">
+                    <div class="col-lg-3 col-md-4">
+                        <div class="counter bg-white rounded py-8 px-3 shadow mb-5 mb-md-0">
+                            <div class="counter-desc"> <span class="count-number text-primary display-4" data-to="10"
+                                    data-speed="1000">9</span>
+                                {{-- <span class="display-4">Years</span> --}}
+                                <h5 class="mb-0 mt-3">@lang('home.section_3.text_2')</h5>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-3 col-md-6 mb-8 mb-lg-0">
-                        <div class="text-center shadow hover-translate p-5">
-                            <div class="mb-3">
-                                <img class="img-fluid rounded-top" src="/assets/v2/images/team/02.png" alt="">
+                    <div class="col-md-4">
+                        <div class="counter bg-white rounded py-8 px-3 shadow mb-5">
+                            <div class="counter-desc"> <span class="count-number text-success display-4" data-to="368"
+                                    data-speed="10000">368</span>
+                                {{-- <span class="display-4">k</span> --}}
+                                <h5 class="mb-0 mt-3">@lang('home.section_3.text_1')</h5>
                             </div>
-                            <div>
-                                <h6 class="mb-1">Nina Loe</h6>
-                                <small class="text-muted mb-3 d-block">Ceo</small>
-                                <ul class="list-inline mb-0">
-                                    <li class="list-inline-item"><a class="text-muted" href="#"><i
-                                                class="la la-facebook h4"></i></a>
-                                    </li>
-                                    <li class="list-inline-item"><a class="text-muted h6" href="#"><i
-                                                class="la la-dribbble h4"></i></a>
-                                    </li>
-                                    <li class="list-inline-item"><a class="text-muted h6" href="#"><i
-                                                class="la la-twitter h4"></i></a>
-                                    </li>
-                                    <li class="list-inline-item"><a class="text-muted h6" href="#"><i
-                                                class="la la-linkedin h4"></i></a>
-                                    </li>
-                                </ul>
+                        </div>
+                        <div class="counter bg-white rounded py-8 px-3 shadow mb-5 mb-md-0">
+                            <div class="counter-desc"> <span class="count-number text-warning display-4" data-to="6"
+                                    data-speed="1000">5</span>
+                                {{-- <span class="display-4">K</span> --}}
+                                <h5 class="mb-0 mt-3">@lang('home.section_3.text_3')</h5>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-3 col-md-6 mb-8 mb-md-0">
-                        <div class="text-center hover-translate p-5">
-                            <div class="mb-3">
-                                <img class="img-fluid rounded-top" src="/assets/v2/images/team/03.png" alt="">
-                            </div>
-                            <div>
-                                <h6 class="mb-1">Renut John</h6>
-                                <small class="text-muted mb-3 d-block">Founder</small>
-                                <ul class="list-inline mb-0">
-                                    <li class="list-inline-item"><a class="text-muted" href="#"><i
-                                                class="la la-facebook h4"></i></a>
-                                    </li>
-                                    <li class="list-inline-item"><a class="text-muted h6" href="#"><i
-                                                class="la la-dribbble h4"></i></a>
-                                    </li>
-                                    <li class="list-inline-item"><a class="text-muted h6" href="#"><i
-                                                class="la la-twitter h4"></i></a>
-                                    </li>
-                                    <li class="list-inline-item"><a class="text-muted h6" href="#"><i
-                                                class="la la-linkedin h4"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-3 col-md-6">
-                        <div class="text-center hover-translate p-5">
-                            <div class="mb-3">
-                                <img class="img-fluid rounded-top" src="/assets/v2/images/team/04.png" alt="">
-                            </div>
-                            <div>
-                                <h6 class="mb-1">Biton Leeny</h6>
-                                <small class="text-muted mb-3 d-block">Supervisor</small>
-                                <ul class="list-inline mb-0">
-                                    <li class="list-inline-item"><a class="text-muted" href="#"><i
-                                                class="la la-facebook h4"></i></a>
-                                    </li>
-                                    <li class="list-inline-item"><a class="text-muted h6" href="#"><i
-                                                class="la la-dribbble h4"></i></a>
-                                    </li>
-                                    <li class="list-inline-item"><a class="text-muted h6" href="#"><i
-                                                class="la la-twitter h4"></i></a>
-                                    </li>
-                                    <li class="list-inline-item"><a class="text-muted h6" href="#"><i
-                                                class="la la-linkedin h4"></i></a>
-                                    </li>
-                                </ul>
+                    <div class="col-lg-3 col-md-4">
+                        <div class="counter bg-white rounded py-8 px-3 shadow">
+                            <div class="counter-desc"> <span class="count-number text-danger display-4" data-to="455"
+                                    data-speed="10000">64</span>
+                                <span class="display-4">k</span>
+                                <h5 class="mb-0 mt-3">@lang('home.section_3.text_4')</h5>
                             </div>
                         </div>
                     </div>
@@ -367,244 +284,80 @@
             </div>
         </section>
 
-        <!--team end-->
 
-
-        <!--pricing start-->
-
-        <section>
-            <div class="container-fluid">
-                <div class="row align-items-center">
-                    <div class="col-12 col-md-12 col-lg-4 order-lg-1 mb-8 mb-lg-0">
-                        <div class="mb-0"> <span class="badge badge-primary-soft p-2 font-w-6">
-                                Price Table
-                            </span>
-                            <h2 class="mt-3 font-w-5">Simple, Fair and affordable prices for all.</h2>
-                            <p class="lead mb-0">All types of businesses need access to development resources, so
-                                we give you the
-                                option to decide how much you need to use.</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-12 col-lg-8">
-                        <div class="row align-items-center">
-                            <div class="col-12 col-md-6">
-                                <!-- Card -->
-                                <div class="card border-0">
-                                    <!-- Body -->
-                                    <div class="card-body py-11 px-6">
-                                        <!-- Badge -->
-                                        <div class="text-center mb-5"> <span class="badge text-dark shadow">
-                                                <span class="h6 text-uppercase">Monthly</span>
-                                            </span>
-                                        </div>
-                                        <!-- Price -->
-                                        <div class="d-flex justify-content-center"> <span class="h2 mb-0 mt-2">$</span>
-                                            <span class="price display-2">59</span>
-                                            <span class="h2 align-self-end mb-1">/mo</span>
-                                        </div>
-                                        <!-- Text -->
-                                        <p class="text-center text-muted mb-6 mb-md-8">Per user</p>
-                                        <!-- Features -->
-                                        <div class="d-flex align-items-start justify-content-between">
-                                            <!-- Text -->
-                                            <p>Responsive landing pages</p>
-                                            <!-- Check -->
-                                            <div class="ms-4"> <i class="la la-check text-primary fw-bold"></i>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex align-items-start justify-content-between">
-                                            <!-- Text -->
-                                            <p>Free Custom Domain</p>
-                                            <!-- Check -->
-                                            <div class="ms-4"> <i class="la la-check text-primary fw-bold"></i>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex align-items-start justify-content-between">
-                                            <!-- Text -->
-                                            <p>Flexible, simple license</p>
-                                            <!-- Check -->
-                                            <div class="ms-4"> <i class="la la-check text-primary fw-bold"></i>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex align-items-start justify-content-between">
-                                            <!-- Text -->
-                                            <p>Monthly updates</p>
-                                            <!-- Check -->
-                                            <div class="ms-4"> <i class="la la-check text-primary fw-bold"></i>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex align-items-start justify-content-between">
-                                            <!-- Text -->
-                                            <p>Outstanding Support</p>
-                                            <!-- Check -->
-                                            <div class="ms-4"> <i class="la la-check text-primary fw-bold"></i>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex align-items-start justify-content-between">
-                                            <!-- Text -->
-                                            <p>Happy Customers</p>
-                                            <!-- Check -->
-                                            <div class="ms-4"> <i class="la la-check text-primary fw-bold"></i>
-                                            </div>
-                                        </div>
-                                        <!-- Button --> <a href="#" class="btn btn-block btn-primary mt-5">
-                                            Choose Packege
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6">
-                                <!-- Card -->
-                                <div class="card shadow border-0">
-                                    <!-- Body -->
-                                    <div class="card-body py-11 px-6">
-                                        <!-- Badge -->
-                                        <div class="text-center mb-5"> <span class="badge text-dark shadow">
-                                                <span class="h6 text-uppercase">Yearly</span>
-                                            </span>
-                                        </div>
-                                        <!-- Price -->
-                                        <div class="d-flex justify-content-center"> <span class="h2 mb-0 mt-2">$</span>
-                                            <span class="price display-2">89</span>
-                                            <span class="h2 align-self-end mb-1">/mo</span>
-                                        </div>
-                                        <!-- Text -->
-                                        <p class="text-center text-muted mb-6 mb-md-8">Per user</p>
-                                        <!-- Features -->
-                                        <div class="d-flex align-items-start justify-content-between">
-                                            <!-- Text -->
-                                            <p>Responsive landing pages</p>
-                                            <!-- Check -->
-                                            <div class="ms-4"> <i class="la la-check text-primary fw-bold"></i>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex align-items-start justify-content-between">
-                                            <!-- Text -->
-                                            <p>Free Custom Domain</p>
-                                            <!-- Check -->
-                                            <div class="ms-4"> <i class="la la-check text-primary fw-bold"></i>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex align-items-start justify-content-between">
-                                            <!-- Text -->
-                                            <p>Flexible, simple license</p>
-                                            <!-- Check -->
-                                            <div class="ms-4"> <i class="la la-check text-primary fw-bold"></i>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex align-items-start justify-content-between">
-                                            <!-- Text -->
-                                            <p>Monthly updates</p>
-                                            <!-- Check -->
-                                            <div class="ms-4"> <i class="la la-check text-primary fw-bold"></i>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex align-items-start justify-content-between">
-                                            <!-- Text -->
-                                            <p>Outstanding Support</p>
-                                            <!-- Check -->
-                                            <div class="ms-4"> <i class="la la-check text-primary fw-bold"></i>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex align-items-start justify-content-between">
-                                            <!-- Text -->
-                                            <p>Happy Customers</p>
-                                            <!-- Check -->
-                                            <div class="ms-4"> <i class="la la-check text-primary fw-bold"></i>
-                                            </div>
-                                        </div>
-                                        <!-- Button --> <a href="#" class="btn btn-block btn-primary mt-5">
-                                            Choose Package
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- / .row -->
-            </div>
-            <!-- / .container -->
-        </section>
-
-        <!--pricing end-->
-
-
-        <!--blog start-->
-
-        <section>
+        <section style="padding-top: 10px;">
             <div class="container">
-                <div class="row justify-content-center text-center">
-                    <div class="col-12 col-md-12 col-lg-8 mb-8 mb-lg-0">
-                        <div class="mb-8"> <span class="badge badge-primary-soft p-2 font-w-6">
-                                Latest News
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-12 col-lg-6 mb-6 mb-lg-0">
+                        <img src="/assets/v2/images/about/03.png" alt="Image" class="img-fluid">
+                    </div>
+                    <div class="col-12 col-lg-6 col-xl-5">
+                        <div> <span class="badge badge-primary-soft p-2">
+                                <i class="la la-exclamation ic-3x rotation"></i>
                             </span>
-                            <h2 class="mt-3 font-w-5">From Our Blog List Latest Feed</h2>
-                            <p class="lead mb-0">All types of businesses need access to development resources, so
-                                we give you the
-                                option to decide how much you need to use.</p>
+                            <h2 class="mt-3">@lang('home.section_4.title')</h2>
+                            <p class="lead">@lang('home.section_4.descreption')</p>
                         </div>
-                    </div>
-                </div>
-                <!-- / .row -->
-                <div class="row">
-                    <div class="col-12 col-lg-6 mb-8 mb-lg-0">
-                        <!-- Blog Card -->
-                        <div class="card border-0 shadow">
-                            <div
-                                class="position-absolute bg-white shadow-primary text-center p-2 rounded ms-3 mt-3 z-index-1">
-                                15
-                                <br>July
-                            </div>
-                            <div class="row no-gutters align-items-center">
-                                <div class="col-md-5">
-                                    <img src="/assets/v2/images/blog/01.png" class="img-fluid" alt="...">
-                                </div>
-                                <div class="col-md-7">
-                                    <div class="card-body"> <a class="d-inline-block text-muted mb-2"
-                                            href="#">Sass</a>
-                                        <h2 class="h5 font-weight-medium">
-                                            Bootsland Perfect Performance landing Page
-                                        </h2>
-                                        <p>Businesses need access to development resources serspiciatis.</p>
-                                        <a class="btn-link" href="blog-single.html">Read More</a>
+                        {{-- <div class="d-flex flex-wrap justify-content-start">
+                            <div class="mb-3 me-4">
+                                <div class="d-flex align-items-center">
+                                    <div class="badge-primary-soft rounded p-1">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" class="feather feather-check">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
                                     </div>
+                                    <p class="mb-0 ms-3">Fully Responsive</p>
                                 </div>
                             </div>
-                        </div>
-                        <!-- End Blog Card -->
-                    </div>
-                    <div class="col-12 col-lg-6 mb-8 mb-lg-0">
-                        <!-- Blog Card -->
-                        <div class="card border-0 shadow">
-                            <div
-                                class="position-absolute bg-white shadow-primary text-center p-2 rounded ms-3 mt-3 z-index-1">
-                                15
-                                <br>July
-                            </div>
-                            <div class="row no-gutters align-items-center">
-                                <div class="col-md-5">
-                                    <img src="/assets/v2/images/blog/02.png" class="img-fluid" alt="...">
-                                </div>
-                                <div class="col-md-7">
-                                    <div class="card-body"> <a class="d-inline-block text-muted mb-2"
-                                            href="#">Marketing</a>
-                                        <h2 class="h5 font-weight-medium">
-                                            The most powerfull template that make you.
-                                        </h2>
-                                        <p>Businesses need access to development resources serspiciatis.</p>
-                                        <a class="btn-link" href="blog-single.html">Read More</a>
+                            <div class="mb-3 me-4">
+                                <div class="d-flex align-items-center">
+                                    <div class="badge-primary-soft rounded p-1">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" class="feather feather-check">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
                                     </div>
+                                    <p class="mb-0 ms-3">Based On Bootstrap 4</p>
+                                </div>
+                            </div>
+                            <div class="mb-3 me-4">
+                                <div class="d-flex align-items-center">
+                                    <div class="badge-primary-soft rounded p-1">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" class="feather feather-check">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                    </div>
+                                    <p class="mb-0 ms-3">Built with Sass</p>
+                                </div>
+                            </div>
+                            <div class="mb-3 me-4">
+                                <div class="d-flex align-items-center">
+                                    <div class="badge-primary-soft rounded p-1">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" class="feather feather-check">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                    </div>
+                                    <p class="mb-0 ms-3">SVG Icon</p>
                                 </div>
                             </div>
                         </div>
-                        <!-- End Blog Card -->
+                        <a href="#" class="btn btn-outline-primary mt-5">
+                            Learn More
+                        </a> --}}
                     </div>
                 </div>
             </div>
         </section>
 
-        <!--blog end-->
+
+
 
     </div>
 

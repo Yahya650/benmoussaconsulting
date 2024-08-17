@@ -10,6 +10,24 @@ use Illuminate\Support\Facades\Config;
 class HomeController extends Controller
 {
 
+    public function toggleLanguage()
+    {
+        // Get the current language from the session or fallback to the default
+        $currentLang = session()->get('lang', Config::get('app.fallback_locale'));
+
+        // Toggle language
+        $newLang = $currentLang === 'fr' ? 'ar' : 'fr';
+
+        // Set the new language in the session
+        session()->put('lang', $newLang);
+
+        // Set the application locale
+        App::setLocale($newLang);
+
+        // Redirect back to the previous page
+        return redirect()->back();
+    }
+
     public function redirect()
     {
 
