@@ -21,7 +21,7 @@
             </div>
             <div class="breadcrumb-outer">
                 <ul class="page-breadcrumb">
-                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="{{ route('web.home') }}">Accueil</a></li>
                     <li>Les différents types de coaching individuel</li>
                 </ul>
             </div>

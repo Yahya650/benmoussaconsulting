@@ -89,8 +89,8 @@
                             <h5 class="mt-4 mb-3">@lang('home.section_1.cards.card_1.title')</h5>
                             {{-- <p>Serspiciatis unde omnis iste natus error sit doloremque laudantium, totam rem
                                 aperiam.</p> --}}
-                            <a class="btn-link link-underline link-underline-opacity-0" href="https://www.youtube.com/watch?v=H9QqaVrSDK0"
-                                target="_blank">@lang('home.section_1.cards.card_1.button')</a>
+                            <a class="btn-link link-underline link-underline-opacity-0"
+                                href="https://www.youtube.com/watch?v=H9QqaVrSDK0" target="_blank">@lang('home.section_1.cards.card_1.button')</a>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-3 col-sm-6">
@@ -109,8 +109,8 @@
                             <h5 class="mt-4 mb-3">@lang('home.section_1.cards.card_2.title')</h5>
                             {{-- <p>Serspiciatis unde omnis iste natus error sit doloremque laudantium, totam rem
                                 aperiam.</p> --}}
-                            <a class="btn-link link-underline link-underline-opacity-0" href="https://www.youtube.com/watch?v=iwcf3gv_Zc4"
-                                target="_blank">@lang('home.section_1.cards.card_2.button')</a>
+                            <a class="btn-link link-underline link-underline-opacity-0"
+                                href="https://www.youtube.com/watch?v=iwcf3gv_Zc4" target="_blank">@lang('home.section_1.cards.card_2.button')</a>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-3 col-sm-6 mt-6 mt-sm-0">
@@ -129,8 +129,8 @@
                             <h5 class="mt-4 mb-3">@lang('home.section_1.cards.card_3.title')</h5>
                             {{-- <p>Serspiciatis unde omnis iste natus error sit doloremque laudantium, totam rem
                                 aperiam.</p> --}}
-                            <a class="btn-link link-underline link-underline-opacity-0" href="https://www.youtube.com/watch?v=0pKUSbq3SS0"
-                                target="_blank">@lang('home.section_1.cards.card_3.button')</a>
+                            <a class="btn-link link-underline link-underline-opacity-0"
+                                href="https://www.youtube.com/watch?v=0pKUSbq3SS0" target="_blank">@lang('home.section_1.cards.card_3.button')</a>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-3 col-sm-6 mt-6 mt-sm-0">
@@ -150,8 +150,8 @@
                             <h5 class="mt-4 mb-3">@lang('home.section_1.cards.card_4.title')</h5>
                             {{-- <p>Serspiciatis unde omnis iste natus error sit doloremque laudantium, totam rem
                                 aperiam.</p> --}}
-                            <a class="btn-link link-underline link-underline-opacity-0" href="https://www.youtube.com/watch?v=ACmDMOg-iK4"
-                                target="_blank">@lang('home.section_1.cards.card_4.button')</a>
+                            <a class="btn-link link-underline link-underline-opacity-0"
+                                href="https://www.youtube.com/watch?v=ACmDMOg-iK4" target="_blank">@lang('home.section_1.cards.card_4.button')</a>
                         </div>
                     </div>
                 </div>
@@ -159,8 +159,8 @@
         </section>
 
 
-        <section class="custom-pt-1 custom-pb-2 bg-dark position-relative" data-bg-img="/assets/v2/images/bg/02.png"
-            style="background-image: url(&quot;assets/images/bg/02.png&quot;);">
+        <section class="custom-pt-1 custom-pb-2 bg-dark position-relative"
+            style="background-image: url(&quot;/assets/v2/images/bg/02.png&quot;);">
             <div class="container">
                 <div class="row align-items-end">
                     <div class="col-lg-4 col-md-6 mb-8 mb-lg-0 text-white">

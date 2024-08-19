@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>@yield('title')</title>
-    <meta name="description" content="">
     <link rel="shortcut icon" href="/web/images/favicon1.png" type="image/x-icon">
     <link rel="icon" href="/web/images/favicon1.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,6 +13,7 @@
     <link rel="stylesheet" href="/assets/leads_form/font/flaticon.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/leads_form/css/style.css?v=0.0.1">
+    @yield('seo')
     @yield('style')
 </head>
 

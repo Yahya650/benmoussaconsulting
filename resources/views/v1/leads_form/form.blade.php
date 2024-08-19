@@ -6,7 +6,6 @@
         content="benmoussa consulting, Mohamed BenMoussa, Formateur international, Coach certifié, Comportements relationnels, Développement humain, Améliorer les relations, Éducation sexuelle, Coaching en relations, Conseils relationnels, Stratégies pratiques, Vie épanouissante, Développement personnel, État d'esprit positif,Relations intimes, Vie équilibrée, Coaching personnalisé, Cours de développement personnel, Radio coaching, Épanouissement personnel, Relations significatives">
     <meta property="og:description"
         content="Mohamed BenMoussa est bien plus qu'un coach ordinaire. Avec des années d'expérience et une compréhension profonde des complexités de la vie moderne, il offre des conseils perspicaces et des stratégies pratiques pour aider les individus à surmonter les obstacles, à développer un état d'esprit positif et à établir des relations significatives et épanouissantes.">
-
 @endsection
 
 
@@ -25,7 +24,7 @@
             </div>
 
             <div class="fxt-header">
-                <a href="login-30.html" class="fxt-logo"><img src="/assets/leads_form/img/output-onlinegiftools.gif"
+                <a href="{{route('web.home')}}" class="fxt-logo"><img src="/assets/leads_form/img/output-onlinegiftools.gif"
                         alt="Logo"></a>
             </div>
             <div class="fxt-form">
