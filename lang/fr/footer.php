@@ -26,7 +26,12 @@ return [
         'title' => 'Nous vous appellerons',
         'form' => [
             'placeholder' => "Votre telephone",
-            'button' => "Prendre Rendez-Vous"
+            'button' => "Prendre Rendez-Vous",
+            'error' => "Oops...",
+            'error_1' => "SVP, veuillez entrer votre numéro de telephone",
+            'error_2' => "SVP, veuillez entrer un numéro de telephone valide",
+            'success' => "Felicitations",
+            'success_text' => "Votre numero de telephone a été envoyé avec succès",
         ]
     ],
 ];

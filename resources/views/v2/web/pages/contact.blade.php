@@ -74,29 +74,31 @@
                 </div>
                 <div class="row justify-content-center text-center">
                     <div class="col-12 col-lg-10">
-                        <form id="contact-form" class="row" method="post" action="php/contact.php" novalidate="true">
+                        <form id="contact-form" class="row" data-waitbutton="#submit" novalidate="true"
+                            action="{{ route('send.message') }}" method="POST">
+                            @csrf
                             <div class="messages"></div>
                             <div class="form-group col-md-6">
-                                <input id="form_name" type="text" name="name" class="form-control"
+                                <input id="form_name" type="text" name="first_name" class="form-control"
                                     placeholder="@lang('contact.section_4.form.first_name_placeholder')" required="required" data-error="@lang('contact.section_4.form.first_name_error')">
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group col-md-6">
-                                <input id="form_name1" type="text" name="name" class="form-control"
+                                <input id="form_name1" type="text" name="last_name" class="form-control"
                                     placeholder="@lang('contact.section_4.form.last_name_placeholder')" required="required" data-error="@lang('contact.section_4.form.last_name_error')">
                                 <div class="help-block with-errors"></div>
                             </div>
-                            <div class="form-group col-md-12">
+                            <div class="form-group col-md-6">
                                 <input id="form_email" type="email" name="email" class="form-control"
                                     placeholder="@lang('contact.section_4.form.email_placeholder')" required="required" data-error="@lang('contact.section_4.form.email_error')">
                                 <div class="help-block with-errors"></div>
                             </div>
-                            <div class="form-group col-md-12">
-                                <input id="form_phone" type="tel" name="phone" class="form-control"
+                            <div class="form-group col-md-6">
+                                <input id="form_phone" type="tel" name="phone_number" class="form-control"
                                     placeholder="@lang('contact.section_4.form.phone_placeholder')" required="required" data-error="@lang('contact.section_4.form.phone_error')">
                                 <div class="help-block with-errors"></div>
                             </div>
-                            <div class="form-group col-md-6">
+                            {{-- <div class="form-group col-md-6">
                                 <select class="form-select form-control">
                                     <option>@lang('contact.section_4.form.select_service')</option>
                                     <option>@lang('contact.section_4.form.service_1')</option>
@@ -105,8 +107,8 @@
                                     <option>@lang('contact.section_4.form.service_4')</option>
                                     <option>@lang('contact.section_4.form.service_5')</option>
                                 </select>
-                            </div>
-                            <div class="form-group col-md-6">
+                            </div> --}}
+                            <div class="form-group col-md-12">
                                 <input id="form_subject" type="text" name="subject" class="form-control"
                                     placeholder="@lang('contact.section_4.form.subject_placeholder')" required="required" data-error="@lang('contact.section_4.form.subject_error')">
                                 <div class="help-block with-errors"></div>
@@ -117,7 +119,7 @@
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="col-md-12 text-center mt-4">
-                                <button class="btn btn-primary"><span>@lang('contact.section_4.form.submit_button')</span>
+                                <button class="btn btn-primary" id="submit"><span>@lang('contact.section_4.form.submit_button')</span>
                                 </button>
                             </div>
                         </form>
@@ -131,51 +133,53 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        $(document).ready(function() {
-            $('#clientForm').on('submit', function(e) {
-                e.preventDefault();
+        // $(document).ready(function() {
+        //     $('#contact-form').on('submit', function(e) {
+        //         e.preventDefault();
 
-                const form = $(this);
-                const submitButton = $('#submit');
+        //         const form = $(this);
+        //         const submitButton = $('#submit');
 
-                submitButton.html(`<i class="fa fa-spinner fa-pulse"></i>`)
-                    .css("cursor", "not-allowed")
-                    .attr("disabled", true);
+        //         submitButton.html(`<i class="fa fa-spinner fa-pulse"></i>`)
+        //             .css("cursor", "not-allowed")
+        //             .attr("disabled", true);
 
-                $.ajax({
-                    type: "POST",
-                    url: "{{ route('send.message') }}",
-                    data: {
-                        _token: "{{ csrf_token() }}",
-                        full_name: $('input[name=full_name]').val(),
-                        email: $('input[name=email]').val(),
-                        subject: $('input[name=subject]').val(),
-                        text: $('#text').val(),
-                    },
-                    success: function(response) {
-                        submitButton.html(`
-                            <i class="fa fa-paper-plane"></i>
-                        `).attr("disabled", false).css("cursor",
-                            "pointer");
+        //         $.ajax({
+        //             type: "POST",
+        //             url: "{{ route('send.message') }}",
+        //             data: {
+        //                 _token: "{{ csrf_token() }}",
+        //                 first_name: $('input[name=first_name]').val(),
+        //                 last_name: $('input[name=last_name]').val(),
+        //                 email: $('input[name=email]').val(),
+        //                 phone_number: $('input[name=phone_number]').val(),
+        //                 subject: $('input[name=subject]').val(),
+        //                 text: $('#form_message').val(),
+        //             },
+        //             success: function(response) {
+        //                 submitButton.html(`
+    //                 <i class="fa fa-paper-plane"></i>
+    //             `).attr("disabled", false).css("cursor",
+        //                     "pointer");
 
-                        Swal.fire({
-                            icon: "success",
-                            title: "Félicitation",
-                            html: response.message,
-                        });
-                    },
-                    error: function(res, status, error) {
-                        submitButton.text("Envoyer").attr("disabled", false).css("cursor",
-                            "pointer");
-                        Swal.fire({
-                            icon: "error",
-                            title: "Oops...",
-                            html: res.responseJSON.message,
-                        });
-                    }
-                });
-            });
-        });
+        // Swal.fire({
+        //     icon: "success",
+        //     title: "{{ __('footer.part_4.form.success') }}",
+        //     html: response.message,
+        // });
+        //             },
+        //             error: function(res, status, error) {
+        //                 submitButton.text("Envoyer").attr("disabled", false).css("cursor",
+        //                     "pointer");
+        //                 Swal.fire({
+        //                     icon: "error",
+        //                     title: "{{ __('footer.part_4.form.error') }}",
+        //                     html: res.responseJSON.message,
+        //                 });
+        //             }
+        //         });
+        //     });
+        // });
     </script>
 
 @endsection
