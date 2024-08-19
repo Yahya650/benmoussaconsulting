@@ -36,7 +36,7 @@ class ClientsController extends Controller
         $oldClient = Client::where('phone_number', request()->phone_number)->first();
         if ($oldClient) {
             return response()->json([
-                'message' => "عميل مسجل لدينا بالفعل. 📋\nيرجى التواصل معنا على الأرقام التالية لتحديد موعدك الجديد: 📞\n0520816447 / 0665228542"
+                'message' => __('messages.lead_already_exist') . " 📋\n" . __('messages.contact_us_on') . " 0520816447 / 0665228542"
             ], 400);
         }
         try {

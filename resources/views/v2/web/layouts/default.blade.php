@@ -108,6 +108,14 @@
 
     <!--back-to-top end-->
 
+
+    <!-- sweet alert start -->
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- sweet alert end -->
+
+
     <!-- inject js start -->
 
     <script src="/assets/v2/js/theme-plugin.js"></script>

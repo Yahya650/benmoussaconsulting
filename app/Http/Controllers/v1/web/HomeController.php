@@ -31,7 +31,7 @@ class HomeController extends Controller
     public function redirect()
     {
 
-        dd(session()->get('lang'));
+        // dd(session()->get('lang'));
 
         $lang = session()->get('lang');
 

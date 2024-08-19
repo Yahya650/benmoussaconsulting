@@ -16,8 +16,10 @@ class MessageController extends Controller
         $req = request();
         try {
             $message = new Message();
-            $message->full_name = $req->full_name;
+            // $message->full_name = $req->full_name; // V1
+            $message->full_name = $req->last_name . " " . $req->first_name; // V2
             $message->email = $req->email;
+            $message->phone_number = $req->phone_number; // V2
             $message->subject = $req->subject;
             $message->text = $req->text;
             $message->created_at = now("Africa/Casablanca");
@@ -27,7 +29,7 @@ class MessageController extends Controller
 
             Mail::to("contact@benmoussaconsulting.com")->send(new MessageNotifMail($message));
 
-            return response()->json(['message' => "تم ارسال رسالتك بنجاح"]);
+            return response()->json(['message' => __('messages.success_message')]);
         } catch (\Throwable $th) {
             return response()->json(['message' => $th->getMessage()], 500);
         }
