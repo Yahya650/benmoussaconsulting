@@ -327,8 +327,8 @@ function contactform() {
           }
 
           if (response.target == "_blank") {
-            if (response.URL) {
-              window.open(response.URL, '_blank');
+            if (response.url) {
+              window.open(response.url, '_blank');
             }
           }
           if (response.redirect) {

@@ -3,7 +3,7 @@
 return [
     'hero' => [
         'title' => 'Mohamed BenMoussa Formateur international',
-        'subtitle' => "Apprenez à améliorer vos relations avec votre partenaire et à mieux comprendre l'éducation sexuelle avec Benmoussa, un coach certifié en comportements relationnels et développement humain. Inscrivez-vous dès aujourd'hui à des séances de coaching.",
+        'subtitle' => "Apprenez à améliorer vos relations et votre comportement avec votre entourage. Ne laissez pas vos émotions dicter votre comportement. Si vous ne savez pas comment gérer votre propre image ? Alors il est temps de prendre RDV pour apprendre à maîtriser les signaux non verbaux.",
         'button' => 'Prendre Rendez-Vous',
     ],
     'section_1' => [
@@ -32,23 +32,23 @@ return [
         'title' => 'Avoir un équilibre vie privée / vie professionnelle',
         'services' => [
             'service_1' => [
-                'title' => 'Coaching de développement',
-                'description' => 'Ce type de coaching convient aux situations de prise de poste',
+                'title' => 'Accompagnement de développement',
+                'description' => 'Ce type de Accompagnement convient aux situations de prise de poste',
             ],
             'service_2' => [
-                'title' => 'Coaching de prise de décision',
+                'title' => 'Accompagnement de prise de décision',
                 'description' => 'Conscientiser son processus de décision.',
             ],
             'service_3' => [
-                'title' => 'Coaching de soutien',
+                'title' => 'Accompagnement de soutien',
                 'description' => 'La personne a vécu une situation dramatique.',
             ],
             'service_4' => [
-                'title' => 'Coaching de crise',
-                'description' => 'C\'est un coaching de courte durée avec des séances rapprochées.',
+                'title' => 'Accompagnement de crise',
+                'description' => 'C\'est un Accompagnement de courte durée avec des séances rapprochées.',
             ],
             'service_5' => [
-                'title' => 'Coaching de transition',
+                'title' => 'Accompagnement de transition',
                 'description' => 'La personne est en transition professionnelle.*',
             ],
         ]
@@ -61,6 +61,6 @@ return [
     ],
     'section_4' => [
         'title' => 'Cours de développement personnel',
-        'descreption' => "Bienvenue dans l'univers inspirant de Mohamed BenMoussa, un coach personnel passionné et empathique, spécialisé dans les domaines de la vie, de l'état d'esprit et des relations, y compris les relations intimes et sexuelles. À travers les ondes radio et ses cours intimes, Mohamed BenMoussa a aidé un grand nombre de personnes à atteindre une vie épanouissante et équilibrée.",
+        'descreption' => "Bienvenue dans l'univers inspirant de Mohamed BenMoussa, un formateur et consultant passionné et empathique, spécialisé dans les domaines de la vie, de l'état d'esprit et des relations, À travers les ondes radio et ses cours intimes, Mohamed BenMoussa a aidé un grand nombre de personnes à atteindre une vie épanouissante et équilibrée.",
     ]
 ];

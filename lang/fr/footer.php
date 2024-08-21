@@ -3,10 +3,7 @@
 
 return [
     'part_1' => [
-        'descreption' => "Mohamed BenMoussa est bien plus qu'un coach ordinaire. Avec des années d'expérience et une
-                            compréhension profonde des complexités de la vie moderne, il offre des conseils perspicaces
-                            et des stratégies pratiques pour aider les individus à surmonter les obstacles, à développer
-                            un état d'esprit positif et à établir des relations significatives et épanouissantes.",
+        'descreption' => "Mohamed BenMoussa a des années d'expérience et une compréhension profonde des complexités de la vie moderne, il offre des conseils perspicaces et des stratégies pratiques pour aider les individus à surmonter les obstacles, à développer un état d'esprit positif et à établir des relations significatives et épanouissantes.",
     ],
     'part_2' => [
         'title' => 'Pages',
@@ -16,11 +13,11 @@ return [
     ],
     'part_3' => [
         'title' => 'Services',
-        'service_1' => 'Coaching de développement',
-        'service_2' => 'Coaching de prise de décision',
-        'service_3' => 'Coaching de soutien',
-        'service_4' => 'Coaching de crise',
-        'service_5' => 'Coaching de transition',
+        'service_1' => 'Accompagnement de développement',
+        'service_2' => 'Accompagnement de prise de décision',
+        'service_3' => 'Accompagnement de soutien',
+        'service_4' => 'Accompagnement de crise',
+        'service_5' => 'Accompagnement de transition',
     ],
     'part_4' => [
         'title' => 'Nous vous appellerons',

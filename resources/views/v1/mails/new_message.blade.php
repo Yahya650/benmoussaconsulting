@@ -16,6 +16,7 @@
 
     <p><strong>Full Name:</strong> {{ $message_content->full_name }}</p>
     <p><strong>Email:</strong> {{ $message_content->email }}</p>
+    <p><strong>Phone Number:</strong> {{ $message_content->phone_number }}</p>
     <p><strong>Subject:</strong> {{ $message_content->subject }}</p>
     <p><strong>Message:</strong> {{ $message_content->text }}</p>
 </body>

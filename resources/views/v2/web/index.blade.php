@@ -243,47 +243,6 @@
 
 
 
-        <section class="pt-0">
-            <div class="container">
-                <div class="row text-center align-items-center justify-content-between">
-                    <div class="col-lg-3 col-md-4">
-                        <div class="counter bg-white rounded py-8 px-3 shadow mb-5 mb-md-0">
-                            <div class="counter-desc"> <span class="count-number text-primary display-4" data-to="10"
-                                    data-speed="1000">9</span>
-                                {{-- <span class="display-4">Years</span> --}}
-                                <h5 class="mb-0 mt-3">@lang('home.section_3.text_2')</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="counter bg-white rounded py-8 px-3 shadow mb-5">
-                            <div class="counter-desc"> <span class="count-number text-success display-4" data-to="368"
-                                    data-speed="10000">368</span>
-                                {{-- <span class="display-4">k</span> --}}
-                                <h5 class="mb-0 mt-3">@lang('home.section_3.text_1')</h5>
-                            </div>
-                        </div>
-                        <div class="counter bg-white rounded py-8 px-3 shadow mb-5 mb-md-0">
-                            <div class="counter-desc"> <span class="count-number text-warning display-4" data-to="6"
-                                    data-speed="1000">5</span>
-                                {{-- <span class="display-4">K</span> --}}
-                                <h5 class="mb-0 mt-3">@lang('home.section_3.text_3')</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4">
-                        <div class="counter bg-white rounded py-8 px-3 shadow">
-                            <div class="counter-desc"> <span class="count-number text-danger display-4" data-to="455"
-                                    data-speed="10000">64</span>
-                                <span class="display-4">k</span>
-                                <h5 class="mb-0 mt-3">@lang('home.section_3.text_4')</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
 
         <section style="padding-top: 10px;">
             <div class="container">
