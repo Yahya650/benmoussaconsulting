@@ -81,7 +81,7 @@
                 <div class="col-12 col-sm-6 mt-6 mt-sm-0">
                     <ul class="list-inline mb-0 d-flex gap-3">
                         <li class="list-inline-item">
-                            <a class="text-light ic-2x" href="https://web.facebook.com/coachbenmoussa/">
+                            <a class="text-light ic-2x" href="https://web.facebook.com/coachbenmoussa/" target="_blank">
                                 <i class="fa-brands fa-facebook"></i>
                             </a>
                         </li>
@@ -91,17 +91,17 @@
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="text-light ic-2x" href="https://www.tiktok.com/@mrbenmoussamohamed/">
+                            <a class="text-light ic-2x" href="https://www.tiktok.com/@mrbenmoussamohamed/" target="_blank">
                                 <i class="fa-brands fa-tiktok"></i>
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="text-light ic-2x" href="https://wa.me/212665228542">
+                            <a class="text-light ic-2x" href="https://wa.me/212665228542" target="_blank">
                                 <i class="fa-brands fa-whatsapp"></i>
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="text-light ic-2x" href="https://www.instagram.com/mrbenmoussamohamed/">
+                            <a class="text-light ic-2x" href="https://www.instagram.com/mrbenmoussamohamed/" target="_blank">
                                 <i class="fa-brands fa-instagram"></i>
                             </a>
                         </li>
