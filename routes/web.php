@@ -47,7 +47,7 @@ Route::middleware(['lang'])->prefix('{lang}')->group(function () {
         $sitemap->add(route('web.contact', ['lang' => $lang]));
         $sitemap->add(route('web.coaching.types', ['lang' => $lang]));
         $sitemap->add(route('lead_form', ['lang' => $lang]));
-        $sitemap->add(route('toggle.language', ['lang' => $lang]));
+        // $sitemap->add(route('toggle.language', ['lang' => $lang]));
         $sitemap->add(route('confirmation.message', ['lang' => $lang]));
 
         $sitemap->writeToFile(public_path('sitemap.xml'));
