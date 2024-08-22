@@ -23,7 +23,7 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center bg-transparent p-0 m-0">
                             <li class="breadcrumb-item"><a class="text-dark"
-                                    href="{{ route('web.home') }}">@lang('contact.section_1.breadcrumbs.home')</a></li>
+                                    href="{{ route('web.home', ['lang' => session()->get('lang')]) }}">@lang('contact.section_1.breadcrumbs.home')</a></li>
                             {{-- <li class="breadcrumb-item">@lang('contact.section_1.breadcrumbs.pages')</li> --}}
                             {{-- <li class="breadcrumb-item">@lang('contact.section_1.breadcrumbs.contacts')</li> --}}
                             <li class="breadcrumb-item active text-primary" aria-current="page">@lang('contact.section_1.breadcrumbs.contact_us')</li>
@@ -75,7 +75,7 @@
                 <div class="row justify-content-center text-center">
                     <div class="col-12 col-lg-10">
                         <form id="contact-form" class="row" data-waitbutton="#submit" novalidate="true"
-                            action="{{ route('send.message') }}" method="POST">
+                            action="{{ route('send.message', ['lang' => session()->get('lang')]) }}" method="POST">
                             @csrf
                             <div class="messages"></div>
                             <div class="form-group col-md-6">
@@ -146,7 +146,7 @@
 
         //         $.ajax({
         //             type: "POST",
-        //             url: "{{ route('send.message') }}",
+        //             url: "{{ route('send.message', ['lang' => session()->get('lang')]) }}",
         //             data: {
         //                 _token: "{{ csrf_token() }}",
         //                 first_name: $('input[name=first_name]').val(),

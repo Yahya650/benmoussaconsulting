@@ -19,19 +19,30 @@
         <!-- Star Animation End Here -->
         <div class="fxt-content rounded position-relative">
             <div class="position-absolute top-0 start-0 mt-3 ms-3">
-                <a href="{{ route('web.home') }}"><i class="fa-solid fa-arrow-left fa-beat-fade fa-2xl"
-                        style="color: #000000;"></i></a>
+                <a href="{{ route('web.home', ['lang' => session()->get('lang')]) }}">
+                    <i class="fa-solid fa-arrow-left fa-beat-fade fa-2xl" style="color: #000000;"></i>
+                </a>
+            </div>
+            <div class="position-absolute top-0 end-0 mt-3 me-3">
+                <a href="{{ route('lead_form.change_lang', ['lang' => app()->getLocale() == 'ar' ? 'fr' : 'ar']) }}" class="btn btn-primary">
+                    @if (app()->getLocale() == 'ar')
+                        fr
+                    @else
+                        ar
+                    @endif
+                </a>
             </div>
 
             <div class="fxt-header">
-                <a href="{{route('web.home')}}" class="fxt-logo"><img src="/assets/leads_form/img/output-onlinegiftools.gif"
-                        alt="Logo"></a>
+                <a href="{{ route('web.home', ['lang' => session()->get('lang')]) }}" class="fxt-logo">
+                    <img src="/assets/leads_form/img/output-onlinegiftools.gif" alt="Logo">
+                </a>
             </div>
             <div class="fxt-form">
                 <p class="text-center">
-                    المرجو ادخال المعلومات
+                    {{ __('lead_form.enter_info') }}
                     <br>
-                    Merci de remplir le formulaire
+                    {{-- {{ __('lead_form.enter_info') }} --}}
                 </p>
                 <form id="clientForm">
 
@@ -42,7 +53,7 @@
                     <div class="form-group">
                         <div class="fxt-transformY-50 fxt-transition-delay-1">
                             <input type="text" class="form-control" name="full_name"
-                                placeholder="الاسم الكامل / Nom complet">
+                                placeholder="{{ __('lead_form.full_name') }}">
                             <span id="full_name-error" class="text text-danger mt-2"></span>
                         </div>
                     </div>
@@ -55,54 +66,42 @@
                     <div class="form-group">
                         <div class="fxt-transformY-50 fxt-transition-delay-1">
                             <input type="text" class="form-control" name="phone_number_confirmation"
-                                placeholder="تاكيد رقم الهاتف / Confirmer le numéro de téléphone">
+                                placeholder="{{ __('lead_form.phone_number_confirmation') }}">
                             <span id="phone_number_confirmation-error" class="text text-danger mt-2"></span>
                         </div>
                     </div>
 
-                    {{-- <div class="form-group">
-                        <div class="fxt-transformY-50 fxt-transition-delay-3">
-                            <div class="fxt-checkbox-area">
-                                <div class="checkbox">
-                                    <input id="checkbox1" type="checkbox">
-                                    <label for="checkbox1">Keep me logged in</label>
-                                </div>
-                                <a href="forgot-password-30.html" class="switcher-text">Forgot Password</a>
-                            </div>
-                        </div>
-                    </div> --}}
-
-
                     <div class="form-group">
                         <div class="fxt-transformY-50 fxt-transition-delay-4 d-flex">
                             <button type="submit" id="submit" class="fxt-btn-fill mx-auto"
-                                style="background-color: #168bf8">ارسال / Soumettre</button>
+                                style="background-color: #168bf8">{{ __('lead_form.submit') }}</button>
                         </div>
                     </div>
                 </form>
             </div>
             <div class="fxt-style-line">
                 <div class="fxt-transformY-50 fxt-transition-delay-5">
-                    <h3 class="mb-3">Visitez nos réseaux sociaux</h3>
+                    <h3 class="mb-3">{{ __('lead_form.visit_us') }}</h3>
                 </div>
             </div>
-            <div class="fxt-style-line">
+            {{-- <div class="fxt-style-line">
                 <div class="fxt-transformY-50 fxt-transition-delay-5">
-                    <h3>قم بزيارتنا على شبكات التواصل الاجتماعية</h3>
+                    <h3>{{ __('lead_form.social_media') }}</h3>
                 </div>
-            </div>
+            </div> --}}
 
             <ul class="fxt-socials d-flex justify-content-center">
-                <li class="">
-                    <a href="https://www.instagram.com/mrbenmoussamohamed/" title="Instagram"
+                <li class="mx-0 px-0">
+                    <a href="https://www.instagram.com/mrbenmoussamohamed/" title="{{ __('lead_form.instagram') }}"
                         style="background-color: crimson;"><i class="fab fa-instagram"></i></a>
                 </li>
-                <li class="fxt-facebook fxt-transformY-50 fxt-transition-delay-6">
-                    <a href="https://web.facebook.com/coachbenmoussa/" title="Facebook"><i
+                <li class="fxt-facebook fxt-transformY-50 fxt-transition-delay-6 mx-2">
+                    <a href="https://web.facebook.com/coachbenmoussa/" title="{{ __('lead_form.facebook') }}"><i
                             class="fab fa-facebook-f"></i></a>
                 </li>
-                <li class="">
-                    <a href="https://www.tiktok.com/@mrmohamedbenmoussa/" title="TikTok" style="border: none; width: 41px">
+                <li class="mx-0 px-0">
+                    <a href="https://www.tiktok.com/@mrmohamedbenmoussa/" title="{{ __('lead_form.tiktok') }}"
+                        style="border: none; width: 41px">
                         <img src="/assets/leads_form/img/tiktok-logo-on-transparent-background-free-vector-removebg-preview1.png"
                             srcset="" width="150">
                     </a>
@@ -112,12 +111,13 @@
             <div class="fxt-footer">
                 <div class="fxt-transformY-50 fxt-transition-delay-9">
                     {{-- <p>
-                        Don't have an account?<a href="register-30.html" class="switcher-text2 inline-text">Register</a>
-                    </p> --}}
+                    Don't have an account?<a href="register-30.html" class="switcher-text2 inline-text">Register</a>
+                </p> --}}
                 </div>
             </div>
         </div>
     </section>
+
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
@@ -128,86 +128,78 @@
                 const form = $(this);
                 const submitButton = $('#submit');
 
-                if (!$('input[name=full_name]').val()) {
-                    $('input[name=full_name]').addClass('is-invalid');
-                    $('#full_name-error').text("الرجاء ادخال الاسم الكامل");
-                    return;
-                } else {
-                    $('input[name=full_name]').removeClass('is-invalid');
-                    $('#full_name-error').text("");
+                const fullName = $('input[name=full_name]').val();
+                const phoneNumber = $('input[name=phone_number]').val();
+                const phoneNumberConfirmation = $('input[name=phone_number_confirmation]').val();
+
+                const errors = {
+                    full_name: '',
+                    phone_number: '',
+                    phone_number_confirmation: ''
+                };
+
+                if (!fullName) {
+                    errors.full_name =
+                        "{{ __('lead_form.validation.required', ['attribute' => __('lead_form.validation.full_name')]) }}";
+                } else if (!/^[A-Za-z\s]+$/.test(fullName)) {
+                    errors.full_name = "{{ __('lead_form.validation.alpha') }}";
                 }
 
-                if (!/^[A-Za-z\s]+$/.test($('input[name=full_name]').val())) {
-                    $('input[name=full_name]').addClass('is-invalid');
-                    $('#full_name-error').text(
-                        "الاسم غير صحيح. يجب أن يحتوي فقط على أحرف أبجدية ومسافات.");
-                    return;
-                } else {
-                    $('input[name=full_name]').removeClass('is-invalid');
-                    $('#full_name-error').text("");
+                if (!phoneNumber) {
+                    errors.phone_number =
+                        "{{ __('lead_form.validation.required', ['attribute' => __('lead_form.validation.phone_number')]) }}";
+                } else if (phoneNumber.length != 10 || !/^\d+$/.test(phoneNumber)) {
+                    errors.phone_number = "{{ __('lead_form.validation.digits') }}";
                 }
 
-                if (!$('input[name=phone_number]').val()) {
-                    $('input[name=phone_number]').addClass('is-invalid');
-                    $('#phone_number-error').text("الرجاء ادخال رقم الهاتف");
-                    return;
-                } else {
-                    $('input[name=phone_number]').removeClass('is-invalid');
-                    $('#phone_number-error').text("");
+                if (phoneNumberConfirmation !== phoneNumber) {
+                    errors.phone_number_confirmation = "{{ __('lead_form.validation.confirmed') }}";
                 }
 
-                if ($('input[name=phone_number]').val().length != 10 || !/^\d+$/.test($(
-                        'input[name=phone_number]').val())) {
-                    $('input[name=phone_number]').addClass('is-invalid');
-                    $('#phone_number-error').text("EX: 0600000000 الرجاء ادخال رقم هاتف صحيح");
-                    return;
-                } else {
-                    $('input[name=phone_number]').removeClass('is-invalid');
-                    $('#phone_number-error').text("");
-                }
+                $('input[name=full_name]').toggleClass('is-invalid', !!errors.full_name);
+                $('#full_name-error').text(errors.full_name);
 
-                if ($('input[name=phone_number_confirmation]').val() != $('input[name=phone_number]')
-                    .val()) {
-                    $('input[name=phone_number_confirmation]').addClass('is-invalid');
-                    $('#phone_number_confirmation-error').text("الرجاء التأكد من رقم الهاتف");
+                $('input[name=phone_number]').toggleClass('is-invalid', !!errors.phone_number);
+                $('#phone_number-error').text(errors.phone_number);
+
+                $('input[name=phone_number_confirmation]').toggleClass('is-invalid', !!errors
+                    .phone_number_confirmation);
+                $('#phone_number_confirmation-error').text(errors.phone_number_confirmation);
+
+                if (Object.values(errors).some(error => error)) {
                     return;
-                } else {
-                    $('input[name=phone_number_confirmation]').removeClass('is-invalid');
-                    $('#phone_number_confirmation-error').text("");
                 }
 
                 submitButton.html(`
-                
-                <div class="spinner-border" role="status">
-                                <span class="visually-hidden"></span>
-                            </div>
-
+                    <div class="spinner-border" role="status">
+                        <span class="visually-hidden"></span>
+                    </div>
                 `).css("cursor", "not-allowed").attr("disabled", true);
 
                 $.ajax({
                     type: "POST",
-                    url: "{{ route('leads.store') }}",
+                    url: "{{ route('leads.store', ['lang' => session()->get('lang')]) }}",
                     data: {
                         _token: "{{ csrf_token() }}",
-                        full_name: $('input[name=full_name]').val(),
-                        phone_number: $('input[name=phone_number]').val(),
+                        full_name: fullName,
+                        phone_number: phoneNumber,
                         campaign_name: $('input[name=campaign_name]').val(),
                         adset_name: $('input[name=adset_name]').val(),
                         ad_name: $('input[name=ad_name]').val(),
                     },
                     success: function(response) {
-                        submitButton.html(`
-                        ارسال
-                        `).attr("disabled", false).css("cursor",
-                            "pointer");
+                        submitButton.html(`{{ __('lead_form.validation.submit') }}`).attr(
+                            "disabled",
+                            false).css("cursor", "pointer");
                         window.location.href = response.redirect;
                     },
                     error: function(res, status, error) {
-                        submitButton.text("ارسال").attr("disabled", false).css("cursor",
-                            "pointer");
+                        submitButton.text("{{ __('lead_form.validation.submit') }}").attr(
+                            "disabled",
+                            false).css("cursor", "pointer");
                         Swal.fire({
                             icon: "error",
-                            title: "حدث خطأ...",
+                            title: "{{ __('lead_form.validation.error_title') }}",
                             html: res.responseJSON.message,
                         });
                     }
@@ -215,4 +207,5 @@
             });
         });
     </script>
+
 @endsection

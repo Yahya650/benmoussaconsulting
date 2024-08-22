@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\App;
 use App\Http\Controllers\Controller;
 use RalphJSmit\Laravel\SEO\Support\SEOData;
 use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Route;
 
 class HomeController extends Controller
 {
@@ -13,7 +14,7 @@ class HomeController extends Controller
     public function toggleLanguage()
     {
         // Get the current language from the session or fallback to the default
-        $currentLang = session()->get('lang', Config::get('app.fallback_locale'));
+        $currentLang = request()->lang;
 
         // Toggle language
         $newLang = $currentLang === 'fr' ? 'ar' : 'fr';
@@ -23,15 +24,24 @@ class HomeController extends Controller
 
         // Set the application locale
         App::setLocale($newLang);
+        // dd($newLang);
+
+        // Route::
 
         // Redirect back to the previous page
-        return redirect()->back();
+        return redirect()->back()->withInput(['lang' => $newLang]);
     }
 
     public function redirect()
     {
 
         // dd(session()->get('lang'));
+
+        if ($lang = request()->lang) {
+            App::setLocale($lang);
+            session()->put('lang', $lang);
+            return redirect()->route('web.home', ['lang' => $lang]);
+        }
 
         $lang = session()->get('lang');
 
@@ -44,7 +54,7 @@ class HomeController extends Controller
             session()->put('lang', $lang);
         }
 
-        return redirect()->route('web.home');
+        return redirect()->route('web.home', ['lang' => $lang]);
     }
 
     public function index()
@@ -55,7 +65,7 @@ class HomeController extends Controller
             robots: 'index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1',
             title: 'Accueil',
             image: asset('/web/images/favicon1.png'),
-            canonical_url: route('web.home'),
+            canonical_url: route('web.home', ['lang' => session()->get('lang')]),
             openGraphTitle: 'Mohamed BenMoussa Consulting',
             author: 'BenMoussaConsulting',
             locale: 'fr'
@@ -73,7 +83,7 @@ class HomeController extends Controller
             robots: 'index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1',
             title: 'Contactez-nous',
             image: asset('/web/images/favicon1.png'),
-            canonical_url: route('web.contact'),
+            canonical_url: route('web.contact', ['lang' => session()->get('lang')]),
             openGraphTitle: 'Mohamed BenMoussa Consulting',
             author: 'BenMoussaConsulting',
             locale: 'fr'
@@ -91,7 +101,7 @@ class HomeController extends Controller
             robots: 'index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1',
             title: 'Les différents types de coaching individuel',
             image: asset('/web/images/favicon1.png'),
-            canonical_url: route('web.coaching.types'),
+            canonical_url: route('web.coaching.types', ['lang' => session()->get('lang')]),
             openGraphTitle: 'Mohamed BenMoussa Consulting',
             author: 'BenMoussaConsulting',
             locale: 'fr'

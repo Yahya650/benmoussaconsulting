@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html lang="{{ app()->getLocale() }}" @if (app()->getLocale() == 'ar') dir="rtl" class="rtl" @endif>
 
 <head>
     <meta charset="utf-8">
@@ -15,6 +15,13 @@
     <link rel="stylesheet" href="/assets/leads_form/css/style.css?v=0.0.1">
     @yield('seo')
     @yield('style')
+    <style>
+        /* General styles for RTL (Arabic) */
+        .rtl {
+            direction: rtl;
+            text-align: right;
+        }
+    </style>
 </head>
 
 <body>

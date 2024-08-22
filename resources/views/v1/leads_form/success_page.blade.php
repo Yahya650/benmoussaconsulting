@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="{{ app()->getLocale() }}" dir="{{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }}">
 
 <head>
     <meta charset="UTF-8">
@@ -12,7 +12,7 @@
     <meta property="og:description"
         content="Mohamed BenMoussa est bien plus qu'un coach ordinaire. Avec des années d'expérience et une compréhension profonde des complexités de la vie moderne, il offre des conseils perspicaces et des stratégies pratiques pour aider les individus à surmonter les obstacles, à développer un état d'esprit positif et à établir des relations significatives et épanouissantes.">
 
-    <title>تأكيد الموعد</title>
+    <title>{{ __('lead_form_success_message.appointment_confirmation') }}</title>
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,900&display=swap" rel="stylesheet">
     <style>
         body {
@@ -59,17 +59,16 @@
         <div style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
             <i class="checkmark">✓</i>
         </div>
-        <h1>تأكيد الموعد</h1>
-        <p>مرحبًا <span class="highlight">{{ $client->full_name }}</span>،</p>
+        <h1>{{ __('lead_form_success_message.appointment_confirmation') }}</h1>
+        <p>{{ __('lead_form_success_message.welcome_message', ['name' => $client->full_name]) }}</p>
 
         <p>
-            شكرًا لتزويدنا بمعلوماتك. <br> سنتصل بك في اقرب وقت ممكن لتأكيد موعدك. <br> إذا كان لديك أي استفسارات، يرجى
-            التواصل معنا على الارقام التالية :<br> 0520816447 / 0665228542
+            {!! __('lead_form_success_message.thank_you') !!}
         </p>
-        <p>نتطلع إلى خدمتك قريبًا.</p>
-        <p>مع تحياتنا،<br>[Mr Mohamed BenMoussa]</p>
-        {{-- <a href="{{ route('web.home') }}" class="button mt-5">العودة إلى الصفحة الرئيسية</a> --}}
-
+        <p>{{ __('lead_form_success_message.looking_forward') }}</p>
+        <p>{!! __('lead_form_success_message.regards') !!}</p>
+        <a href="{{ route('web.home', ['lang' => session()->get('lang')]) }}"
+            class="button mt-5">{{ __('lead_form_success_message.back_to_home') }}</a>
     </div>
 </body>
 

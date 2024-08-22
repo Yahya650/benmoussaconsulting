@@ -18,21 +18,17 @@ class Lang
      */
     public function handle(Request $request, Closure $next)
     {
-        // Get the current language from the session or use the fallback locale
-        $lang = session()->get('lang', Config::get('app.fallback_locale'));
+        $lang = $request->route('lang') ?? session('lang', Config::get('app.fallback_locale'));
 
-        // Ensure the selected language is one of the available languages
         if (!in_array($lang, Config::get('app.languages_available'))) {
-            $lang = Config::get('app.fallback_locale');
+            return redirect()->route('redirect');
+            // $lang = Config::get('app.fallback_locale');
         }
 
-        // Set the application locale to the selected language
         App::setLocale($lang);
 
-        // Update the session with the current language
         session()->put('lang', $lang);
 
-        // Proceed with the request
         return $next($request);
     }
 }

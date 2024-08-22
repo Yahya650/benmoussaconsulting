@@ -1,9 +1,8 @@
 <?php
 
 use App\Mail\NewLeadNotifMail;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Mail;
-// use App\Http\Controllers\v1\dashboard\auth\AuthController;
-// use App\Http\Controllers\v1\dashboard\admin\home\HomeController;
 use Spatie\Sitemap\SitemapGenerator;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\v1\web\MessageController;
@@ -21,45 +20,36 @@ use App\Http\Controllers\v1\web\HomeController as WebHomeController;
 |
 */
 
+Route::get('/', [WebHomeController::class, 'redirect'])->name('redirect');
+Route::get('/change-lang', [ClientsController::class, 'changeLang'])->name('lead_form.change_lang');
+
+Route::middleware(['lang'])->prefix('{lang}')->group(function () {
+    // Route::get('/toggle-language', [WebHomeController::class, 'toggleLanguage'])->name('toggle.language');
+
+    Route::namespace('web')->name('web.')->group(function () {
+        Route::get('/', [WebHomeController::class, 'index'])->name('home');
+        Route::get('/contact', [WebHomeController::class, 'contact'])->name('contact');
+        Route::get('/les-differents-types-de-coaching', [WebHomeController::class, 'coachingTypes'])->name('coaching.types');
+    });
+
+    Route::post('/send-message', [MessageController::class, 'sendMessage'])->name('send.message');
+    Route::get('/prendre-rendez-vous', [ClientsController::class, 'getLeadForm'])->name('lead_form');
+    Route::post('/save-appointement', [ClientsController::class, 'postLeadForm'])->name('leads.store');
+    Route::get('/confirmation-message', [ClientsController::class, 'showConfirmation'])->name('confirmation.message');
+    Route::get('/sitemap', function () {
+
+        $lang = App::getLocale();
 
 
-Route::get('/toggle-language', [WebHomeController::class, 'toggleLanguage'])->name('toggle.language');
+        $sitemap = SitemapGenerator::create(config('app.url'))->getSitemap();
 
-Route::namespace('web')->name('web.')->group(function () {
-    Route::get('/', [WebHomeController::class, 'index'])->name('home');
-    Route::get('/contact', [WebHomeController::class, 'contact'])->name('contact');
-    Route::get('/les-differents-types-de-coaching', [WebHomeController::class, 'coachingTypes'])->name('coaching.types');
+        $sitemap->add(route('web.home', ['lang' => $lang]));
+        $sitemap->add(route('web.contact', ['lang' => $lang]));
+        $sitemap->add(route('web.coaching.types', ['lang' => $lang]));
+        $sitemap->add(route('lead_form', ['lang' => $lang]));
+        $sitemap->add(route('toggle.language', ['lang' => $lang]));
+        $sitemap->add(route('confirmation.message', ['lang' => $lang]));
+
+        $sitemap->writeToFile(public_path('sitemap.xml'));
+    });
 });
-
-
-// Route::view('/test', 'welcome');
-
-Route::post('/send-message', [MessageController::class, 'sendMessage'])->name('send.message');
-Route::get('/prendre-rendez-vous', [ClientsController::class, 'getLeadForm'])->name('lead_form');
-Route::post('/save-appointement', [ClientsController::class, 'postLeadForm'])->name('leads.store');
-Route::get('/confirmation-message', [ClientsController::class, 'showConfirmation'])->name('confirmation.message');
-
-
-
-Route::get('/sitemap', function () {
-    $sitemap = SitemapGenerator::create(config('app.url'));
-
-    $sitemap->getSitemap()->add(route('web.home'));
-    $sitemap->getSitemap()->add(route('web.contact'));
-    $sitemap->getSitemap()->add(route('web.coaching.types'));
-    $sitemap->getSitemap()->add(route('lead_form'));
-    $sitemap->getSitemap()->add(route('toggle.language'));
-    $sitemap->getSitemap()->add(route('confirmation.message'));
-    $sitemap->writeToFile(public_path('sitemap.xml'));
-});
-
-    // Route::prefix('auth')->group(function () {
-    //     Route::get('/signin', [AuthController::class, 'getLogin'])->name('auth.signin');
-    //     Route::post('signin', [AuthController::class, 'postSignin'])->name('auth.signin.post');
-    // });
-
-    // Route::middleware(['auth'])->group(function () {
-    //     Route::prefix('admin')->name('admin.')->group(function () {
-    //         Route::get('/', [HomeController::class, 'index'])->name('home');
-    //     });
-    // });

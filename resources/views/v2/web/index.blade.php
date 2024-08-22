@@ -28,7 +28,7 @@
                         @lang('home.hero.subtitle')
                     </p>
                     <!-- Buttons -->
-                    <a href="{{ route('lead_form') }}" class="btn btn-primary me-1">
+                    <a href="{{ route('lead_form', ['lang' => session()->get('lang')]) }}" class="btn btn-primary me-1">
                         @lang('home.hero.button')
                     </a>
                     {{-- <a href="#" class="btn btn-light">
@@ -359,7 +359,7 @@
 
                 $.ajax({
                     type: "POST",
-                    url: "{{ route('leads.store') }}",
+                    url: "{{ route('leads.store', ['lang' => session()->get('lang')]) }}",
                     data: {
                         _token: "{{ csrf_token() }}",
                         // full_name: $('input[name=full_name]').val(),

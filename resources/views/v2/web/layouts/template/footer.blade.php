@@ -12,7 +12,7 @@
                 <div class="row">
                     <div class="col-12 col-sm-6 mt-6 mt-sm-0 navbar-dark">
                         <h5 class="mb-4 text-white">
-                            <a class="footer-logo text-white h2 mb-0" href="{{ route('web.home') }}">
+                            <a class="footer-logo text-white h2 mb-0" href="{{ route('web.home', ['lang' => session()->get('lang')]) }}">
                                 M.Ben<span class="fw-bold">Moussa</span>
                             </a>
                         </h5>
@@ -24,13 +24,13 @@
                         <h5 class="mb-4 text-white">@lang('footer.part_2.title')</h5>
                         <ul class="navbar-nav list-unstyled mb-0">
                             <li class="mb-3 nav-item">
-                                <a class="nav-link" href="{{ route('web.home') }}">@lang('footer.part_2.home')</a>
+                                <a class="nav-link" href="{{ route('web.home', ['lang' => session()->get('lang')]) }}">@lang('footer.part_2.home')</a>
                             </li>
                             <li class="mb-3 nav-item">
-                                <a class="nav-link" href="{{ route('lead_form') }}">@lang('footer.part_2.take_appointment')</a>
+                                <a class="nav-link" href="{{ route('lead_form', ['lang' => session()->get('lang')]) }}">@lang('footer.part_2.take_appointment')</a>
                             </li>
                             <li class="mb-3 nav-item">
-                                <a class="nav-link" href="{{ route('web.contact') }}">@lang('footer.part_2.contact')</a>
+                                <a class="nav-link" href="{{ route('web.contact', ['lang' => session()->get('lang')]) }}">@lang('footer.part_2.contact')</a>
                             </li>
                         </ul>
                     </div>
@@ -154,7 +154,7 @@
 
             $.ajax({
                 type: "POST",
-                url: "{{ route('leads.store') }}",
+                url: "{{ route('leads.store', ['lang' => session()->get('lang')]) }}",
                 data: {
                     _token: "{{ csrf_token() }}",
                     // full_name: $('input[name=full_name]').val(),
