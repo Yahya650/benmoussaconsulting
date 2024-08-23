@@ -1,8 +1,6 @@
 <?php
 
-use App\Mail\NewLeadNotifMail;
 use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\Mail;
 use Spatie\Sitemap\SitemapGenerator;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\v1\web\MessageController;
@@ -19,6 +17,8 @@ use App\Http\Controllers\v1\web\HomeController as WebHomeController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+// Route::view('/test', 'errors.404')->name('404');
 
 Route::get('/', [WebHomeController::class, 'redirect'])->name('redirect');
 Route::get('/change-lang', [ClientsController::class, 'changeLang'])->name('lead_form.change_lang');
@@ -51,5 +51,8 @@ Route::middleware(['lang'])->prefix('{lang}')->group(function () {
         $sitemap->add(route('confirmation.message', ['lang' => $lang]));
 
         $sitemap->writeToFile(public_path('sitemap.xml'));
+    });
+    Route::fallback(function () {
+        return view('errors.404');
     });
 });

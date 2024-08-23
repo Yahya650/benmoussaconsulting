@@ -110,4 +110,20 @@ class HomeController extends Controller
         return view('v2.web.pages.coaching-types', compact('seoData'));
         // return "500";
     }
+    // public function page404()
+    // {
+
+    //     $seoData = new SEOData(
+    //         description: "Mohamed BenMoussa est bien plus qu'un coach ordinaire. Avec des années d'expérience et une compréhension profonde des complexités de la vie moderne, il offre des conseils perspicaces et des stratégies pratiques pour aider les individus à surmonter les obstacles, à développer un état d'esprit positif et à établir des relations significatives et épanouissantes",
+    //         robots: 'index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1',
+    //         title: 'Les différents types de coaching individuel',
+    //         image: asset('/web/images/favicon1.png'),
+    //         canonical_url: route('errors.404', ['lang' => session()->get('lang')]),
+    //         openGraphTitle: 'Mohamed BenMoussa Consulting',
+    //         author: 'BenMoussaConsulting',
+    //         locale: 'fr'
+    //     );
+
+    //     return view('errors.404', compact('seoData'));
+    // }
 }
