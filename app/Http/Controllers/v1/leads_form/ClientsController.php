@@ -109,6 +109,8 @@ class ClientsController extends Controller
 
         );
 
+        
+
         $client = Client::where('id', dcryptID($request->client))->first();
 
         if (!$client) {
