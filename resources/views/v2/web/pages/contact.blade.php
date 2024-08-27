@@ -117,7 +117,7 @@ Gérer les conflits de couple, Gérer les relations professionnelles et personne
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group col-md-12">
-                                <textarea id="form_message" name="message" class="form-control" placeholder="@lang('contact.section_4.form.message_placeholder')" rows="10"
+                                <textarea id="form_message" name="text" class="form-control" placeholder="@lang('contact.section_4.form.message_placeholder')" rows="10"
                                     required="required" data-error="@lang('contact.section_4.form.message_error')"></textarea>
                                 <div class="help-block with-errors"></div>
                             </div>

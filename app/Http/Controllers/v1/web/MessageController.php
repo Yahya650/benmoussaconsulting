@@ -14,6 +14,7 @@ class MessageController extends Controller
     public function sendMessage()
     {
         $req = request();
+        // dd($req->all());
         try {
             $message = new Message();
             // $message->full_name = $req->full_name; // V1
